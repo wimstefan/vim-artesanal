@@ -1,0 +1,37 @@
+# vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
+
+Full name:       Artesanal
+Short name:      artesanal
+Author:          Stefan Wimmer <wimstefan@gmail.com>
+Maintainer:      Stefan Wimmer <wimstefan@gmail.com>
+Website:         https://github.com/wimstefan/vim-artesanal
+Description:     A Vim colorscheme with light and dark variants based on Material Design.
+Terminal Colors: 256
+Option Prefix:   artesanal
+
+Include: _help.colortemplate
+
+Background: light
+Color: fg0 #141414 ~
+Color: fg1 #333333 ~
+Color: fg2 #505050 ~
+Color: fg4 #707070 ~
+Color: bg0 #fbfbfb ~
+Color: bg1 #ebebeb ~
+Color: bg2 #d3d3d3 ~
+Color: bg3 #bdbdbd ~
+Color: bg4 #a8a8a8 ~
+Include: _light.colortemplate
+
+Background: dark
+Color: fg0 #fbfbfb ~
+Color: fg1 #ebebeb ~
+Color: fg2 #d3d3d3 ~
+Color: fg4 #707070 ~
+Color: bg0 #141414 ~
+Color: bg1 #333333 ~
+Color: bg2 #505050 ~
+Color: bg3 #616161 ~
+Color: bg4 #727272 ~
+Include: _dark.colortemplate
+

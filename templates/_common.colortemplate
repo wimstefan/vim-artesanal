@@ -1,0 +1,148 @@
+# vim: ft=colortemplate fdm=marker
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
+    # Transparent background
+    Normal       fg1           none
+    CursorLineNr yellow        none
+    FoldColumn   brightblack   none
+    SignColumn   fg2           none
+    VertSplit    bg3           none
+verbatim
+else
+endverbatim
+    # Opaque background
+    Normal       fg1           bg0
+    CursorLineNr yellow        bg1
+    FoldColumn   brightblack   bg1
+    SignColumn   fg2           bg1
+    VertSplit    bg3           bg0
+verbatim
+endif
+endverbatim
+
+# Group                          Fg           Bg      Attributes
+ColorColumn                      none         bg1
+Conceal                          blue         none
+Cursor                           none         none    reverse
+CursorColumn                  -> CursorLine
+CursorLine                       none         bg1     bold,italic
+DiffAdd                          fg4          brightgreen
+DiffChange                       fg4          brightblue
+DiffDelete                       fg4          brightred
+DiffText                         fg4          brightyellow
+Directory                        blue         none    bold
+EndOfBuffer                      bg0          none
+Error                            red          bg0     bold,reverse
+ErrorMsg                         bg0          red     bold
+Folded                           brightblack  bg1     g=italic
+IncSearch                        brightyellow black   reverse
+LineNr                           bg2          bg1
+MatchParen                       none         bg3     bold
+ModeMsg                          yellow       none    bold
+MoreMsg                          yellow       none    bold
+NonText                          bg4          none
+Pmenu                            fg1          bg2
+PmenuSbar                        none         bg2
+PmenuSel                         bg1          blue    bold
+PmenuThumb                       none         bg4
+Question                         yellow       none    bold
+QuickFixLine                  -> Search
+Search                           brightyellow black   reverse
+SpecialKey                       bg4          none
+SpellBad                         red          none    t=underline g=italic,undercurl s=red
+SpellCap                         blue         none    t=underline g=italic,undercurl s=blue
+SpellLocal                       cyan         none    t=underline g=italic,undercurl s=cyan
+SpellRare                        magenta      none    t=underline g=italic,undercurl s=magenta
+StatusLine                       bg2          fg1     reverse
+StatusLineNC                     bg1          fg2     reverse
+StatusLineTerm                -> StatusLine
+StatusLineTermNC              -> StatusLineNC
+TabLine                       -> TabLineFill
+TabLineFill                      fg2          bg3
+TabLineSel                       fg1          bg1
+Title                            fg0          none    bold
+Visual                           none         bg1
+VisualNOS                     -> Visual
+WarningMsg                       red          none    bold
+WildMenu                         blue         bg2     bold
+# Other conventional group names (see `:help group-name`)
+Boolean                          magenta      none
+Character                        magenta      none
+Comment                          brightblack  none    g=italic
+Conditional                      red          none
+Constant                         magenta      none
+Define                           cyan         none
+Debug                            red          none
+Delimiter                     -> Statement
+Error                            red          bg0     bold,reverse
+Exception                        red          none
+Float                            magenta      none
+Function                         blue         none    bold
+Identifier                       cyan         none
+Ignore                           fg           none
+Include                          cyan         none
+Keyword                          red          none
+Label                         -> Statement
+Macro                            cyan         none
+Number                           magenta      none
+Operator                      -> Normal
+PreCondit                        cyan         none
+PreProc                          cyan         none
+Repeat                           red          none
+SpecialChar                      red          none
+SpecialComment                   red          none
+Statement                        red          none
+StorageClass                     green        none
+Special                          yellow       none
+String                           green        none
+Structure                        cyan         none
+Tag                           -> Special
+Todo                             fg           bg0     t=bold g=bold,italic
+Type                             cyan         none
+Typedef                          cyan         none
+Underlined                       blue         none    underline
+# Language mapping cursor
+lCursor                       -> Cursor
+# See `:help CursorIM`
+CursorIM                         none         none    reverse
+# See `:help window-toolbar`
+ToolbarLine                      none         bg3
+ToolbarButton                    fg0          bg3     bold
+# }}}
+
+# Italics {{{
+verbatim
+if get(g:, "@optionprefix_italic", 0)
+  hi Comment cterm=italic
+  hi Folded cterm=italic
+  hi SpellBad cterm=italic,underline
+  hi SpellCap cterm=italic,underline
+  hi SpellLocal cterm=italic,underline
+  hi SpellRare cterm=italic,underline
+  hi Todo cterm=italic
+endif
+endverbatim
+# }}}
+
+# Additional highlight groups {{{
+# Input mode cursor
+iCursor                       -> Cursor
+# Visual mode cursor, selection
+vCursor                       -> Cursor
+
+# Useful for custom status lines
+NormalMode                       fg2          bg0     reverse
+InsertMode                       blue         bg0     reverse
+ReplaceMode                      cyan         bg0     reverse
+VisualMode                       yellow       bg0     reverse
+CommandMode                      magenta      bg0     reverse
+Warnings                         yellow       bg0     reverse
+# }}}
+
+# Terminal colors {{{
+Include: _terminal.colortemplate
+# }}}
+

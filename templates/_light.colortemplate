@@ -1,0 +1,28 @@
+# vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
+
+# Comment out (do not delete) the definitions that you want to keep at their default.
+# Color name                GUI         Base256  Base16 (optional)
+Color: black                #000000     ~        Black
+Color: brightblack          #696969     ~        DimGray
+Color: red                  #b72e2e     ~        Red
+Color: brightred            #ff9999     ~        LightRed
+Color: darkred              #a30000     ~        DarkRed
+Color: green                #47b36b     ~        Green
+Color: brightgreen          #b3ffcc     ~        LightGreen
+Color: darkgreen            #268044     ~        DarkGreen
+Color: yellow               #ff9900     ~        Yellow
+Color: brightyellow         #ffd699     ~        LightYellow
+Color: darkyellow           #cc7a00     ~        DarkYellow
+Color: blue                 #5995b3     ~        Blue
+Color: brightblue           #cceeff     ~        LightBlue
+Color: darkblue             #266280     ~        DarkBlue
+Color: magenta              #ab47bc     ~        Magenta
+Color: brightmagenta        #d1c4e9     ~        LightMagenta
+Color: darkmagenta          #4527a0     ~        DarkMagenta
+Color: cyan                 #009688     ~        Cyan
+Color: brightcyan           #b2dfdb     ~        LightCyan
+Color: darkcyan             #00695c     ~        DarkCyan
+Color: white                #ebebeb     ~        Gray92
+Color: brightwhite          #ffffff     ~        White
+
+Include: _common.colortemplate

@@ -1,0 +1,37 @@
+# vim: ft=colortemplate fdm=marker noet ts=8 tw=78
+
+documentation
+*@shortname.txt*	For Vim version 8.0	Last change: 2018 March 26
+
+
+		  VIM REFERENCE MANUAL    by wimstefan
+
+
+			@fullname colorscheme			*@shortname*
+
+@fullname is my personal colorscheme.
+
+It supports dark and light backgrounds, so you must set 'background'
+before loading the colorscheme. For example:
+>
+	set background=light
+	colorscheme @shortname
+<
+@fullname requires at least 256 colors and supports "true color" terminals.
+
+==============================================================================
+1. Colorscheme options					*@optionprefix-options*
+
+							*g:@optionprefix_italic*
+Set to 1 if you want to enable italics in the terminal. Note that the terminal
+must support italics.
+>
+	let g:@optionprefix_italic = 0
+<
+						*g:@optionprefix_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+	let g:@optionprefix_transp_bg = 0
+<
+enddocumentation

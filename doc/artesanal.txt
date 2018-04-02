@@ -1,0 +1,35 @@
+*artesanal.txt*	For Vim version 8.0	Last change: 2018 March 26
+
+
+		  VIM REFERENCE MANUAL    by wimstefan
+
+
+			Artesanal colorscheme			*artesanal*
+
+Artesanal is my personal colorscheme.
+
+It supports dark and light backgrounds, so you must set 'background'
+before loading the colorscheme. For example:
+>
+	set background=light
+	colorscheme artesanal
+<
+Artesanal requires at least 256 colors and supports "true color" terminals.
+
+==============================================================================
+1. Colorscheme options					*artesanal-options*
+
+							*g:artesanal_italic*
+Set to 1 if you want to enable italics in the terminal. Note that the terminal
+must support italics.
+>
+	let g:artesanal_italic = 0
+<
+						*g:artesanal_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+	let g:artesanal_transp_bg = 0
+<
+
+vim:tw=78:ts=8:ft=help:norl:
