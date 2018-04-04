@@ -40,7 +40,7 @@ ErrorMsg                         bg0          red     bold
 Folded                           brightblack  bg1     g=italic
 IncSearch                        brightyellow black   reverse
 LineNr                           bg2          bg1
-MatchParen                       none         bg3     bold
+MatchParen                       none         bg2     bold
 ModeMsg                          yellow       none    bold
 MoreMsg                          yellow       none    bold
 NonText                          bg4          none

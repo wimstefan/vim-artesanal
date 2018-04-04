@@ -22,7 +22,7 @@ Color: darkmagenta          #4527a0     ~        DarkMagenta
 Color: cyan                 #009688     ~        Cyan
 Color: brightcyan           #b2dfdb     ~        LightCyan
 Color: darkcyan             #00695c     ~        DarkCyan
-Color: white                #ebebeb     ~        Gray92
+Color: white                #dcdcdc     ~        Gainsboro
 Color: brightwhite          #ffffff     ~        White
 
 Include: _common.colortemplate

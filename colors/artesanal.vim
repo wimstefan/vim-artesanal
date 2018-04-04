@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 03 Apr 2018 12:32:06 AM CEST
+" Last Updated: Wed 04 Apr 2018 10:18:18 AM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -25,9 +25,9 @@ if &background ==# 'dark'
   "  brightyellow: GUI=#ffffaf/rgb(255,255,175)  Term=229 #ffffaf/rgb(255,255,175)  [delta=0.000000]
   "   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
   "           bg3: GUI=#616161/rgb( 97, 97, 97)  Term=241 #626262/rgb( 98, 98, 98)  [delta=0.368854]
+  "         white: GUI=#dcdcdc/rgb(220,220,220)  Term=253 #dadada/rgb(218,218,218)  [delta=0.455975]
   "           bg0: GUI=#141414/rgb( 20, 20, 20)  Term=233 #121212/rgb( 18, 18, 18)  [delta=0.515624]
   "           fg1: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
-  "         white: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
   "           bg2: GUI=#505050/rgb( 80, 80, 80)  Term=239 #4e4e4e/rgb( 78, 78, 78)  [delta=0.689525]
   "           fg2: GUI=#d3d3d3/rgb(211,211,211)  Term=252 #d0d0d0/rgb(208,208,208)  [delta=0.713123]
   "           fg0: GUI=#fbfbfb/rgb(251,251,251)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.795722]
@@ -81,7 +81,7 @@ if &background ==# 'dark'
   hi Folded ctermfg=242 ctermbg=236 guifg=#696969 guibg=#333333 guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi LineNr ctermfg=239 ctermbg=236 guifg=#505050 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
-  hi MatchParen ctermfg=NONE ctermbg=241 guifg=NONE guibg=#616161 guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi MatchParen ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi ModeMsg ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi MoreMsg ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi NonText ctermfg=243 ctermbg=NONE guifg=#727272 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -193,9 +193,9 @@ endif
 "           bg4: GUI=#a8a8a8/rgb(168,168,168)  Term=248 #a8a8a8/rgb(168,168,168)  [delta=0.000000]
 "   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
 "           bg3: GUI=#bdbdbd/rgb(189,189,189)  Term=250 #bcbcbc/rgb(188,188,188)  [delta=0.262501]
+"         white: GUI=#dcdcdc/rgb(220,220,220)  Term=253 #dadada/rgb(218,218,218)  [delta=0.455975]
 "           fg0: GUI=#141414/rgb( 20, 20, 20)  Term=233 #121212/rgb( 18, 18, 18)  [delta=0.515624]
 "           bg1: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
-"         white: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
 "           fg2: GUI=#505050/rgb( 80, 80, 80)  Term=239 #4e4e4e/rgb( 78, 78, 78)  [delta=0.689525]
 "           bg2: GUI=#d3d3d3/rgb(211,211,211)  Term=252 #d0d0d0/rgb(208,208,208)  [delta=0.713123]
 "           bg0: GUI=#fbfbfb/rgb(251,251,251)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.795722]
@@ -249,7 +249,7 @@ hi ErrorMsg ctermfg=231 ctermbg=124 guifg=#fbfbfb guibg=#b72e2e guisp=NONE cterm
 hi Folded ctermfg=242 ctermbg=255 guifg=#696969 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=222 ctermbg=16 guifg=#ffd699 guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi LineNr ctermfg=252 ctermbg=255 guifg=#d3d3d3 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
-hi MatchParen ctermfg=NONE ctermbg=250 guifg=NONE guibg=#bdbdbd guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi MatchParen ctermfg=NONE ctermbg=252 guifg=NONE guibg=#d3d3d3 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ModeMsg ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi MoreMsg ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=248 ctermbg=NONE guifg=#a8a8a8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -385,7 +385,7 @@ finish
 " Color: cyan                 #009688     ~        Cyan
 " Color: brightcyan           #b2dfdb     ~        LightCyan
 " Color: darkcyan             #00695c     ~        DarkCyan
-" Color: white                #ebebeb     ~        Gray92
+" Color: white                #dcdcdc     ~        Gainsboro
 " Color: brightwhite          #ffffff     ~        White
 "     Normal       fg1           none
 "     CursorLineNr yellow        none
@@ -413,7 +413,7 @@ finish
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
 " LineNr                           bg2          bg1
-" MatchParen                       none         bg3     bold
+" MatchParen                       none         bg2     bold
 " ModeMsg                          yellow       none    bold
 " MoreMsg                          yellow       none    bold
 " NonText                          bg4          none
@@ -520,7 +520,7 @@ finish
 " Color: cyan                 #009688     ~        Cyan
 " Color: brightcyan           #b2dfdb     ~        LightCyan
 " Color: darkcyan             #00695c     ~        DarkCyan
-" Color: white                #ebebeb     ~        Gray92
+" Color: white                #dcdcdc     ~        Gainsboro
 " Color: brightwhite          #ffffff     ~        White
 "     Normal       fg1           none
 "     CursorLineNr yellow        none
@@ -548,7 +548,7 @@ finish
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
 " LineNr                           bg2          bg1
-" MatchParen                       none         bg3     bold
+" MatchParen                       none         bg2     bold
 " ModeMsg                          yellow       none    bold
 " MoreMsg                          yellow       none    bold
 " NonText                          bg4          none
