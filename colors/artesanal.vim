@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed 04 Apr 2018 10:18:18 AM CEST
+" Last Updated: Thu 05 Apr 2018 01:28:35 AM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -76,20 +76,20 @@ if &background ==# 'dark'
   hi DiffText ctermfg=242 ctermbg=229 guifg=#707070 guibg=#ffffaf guisp=NONE cterm=NONE gui=NONE
   hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi EndOfBuffer ctermfg=233 ctermbg=NONE guifg=#141414 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi Error ctermfg=203 ctermbg=233 guifg=#ff4d4d guibg=#141414 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-  hi ErrorMsg ctermfg=233 ctermbg=203 guifg=#141414 guibg=#ff4d4d guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi Error ctermfg=233 ctermbg=203 guifg=#141414 guibg=#ff4d4d guisp=NONE cterm=NONE gui=NONE
+  hi! link ErrorMsg Error
   hi Folded ctermfg=242 ctermbg=236 guifg=#696969 guibg=#333333 guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi LineNr ctermfg=239 ctermbg=236 guifg=#505050 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
   hi MatchParen ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi ModeMsg ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi MoreMsg ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi ModeMsg ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi MoreMsg ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi NonText ctermfg=243 ctermbg=NONE guifg=#727272 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Pmenu ctermfg=255 ctermbg=239 guifg=#ebebeb guibg=#505050 guisp=NONE cterm=NONE gui=NONE
   hi PmenuSbar ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE gui=NONE
   hi PmenuSel ctermfg=236 ctermbg=74 guifg=#333333 guibg=#7ab1cc guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi PmenuThumb ctermfg=NONE ctermbg=243 guifg=NONE guibg=#727272 guisp=NONE cterm=NONE gui=NONE
-  hi Question ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi Question ctermfg=226 ctermbg=NONE guifg=#ffea00 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link QuickFixLine Search
   hi Search ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi SpecialKey ctermfg=243 ctermbg=NONE guifg=#727272 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -107,7 +107,7 @@ if &background ==# 'dark'
   hi Title ctermfg=231 ctermbg=NONE guifg=#fbfbfb guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi Visual ctermfg=NONE ctermbg=236 guifg=NONE guibg=#333333 guisp=NONE cterm=NONE gui=NONE
   hi! link VisualNOS Visual
-  hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi WildMenu ctermfg=74 ctermbg=239 guifg=#7ab1cc guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi Boolean ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Character ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -117,7 +117,6 @@ if &background ==# 'dark'
   hi Define ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Debug ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Delimiter Statement
-  hi Error ctermfg=203 ctermbg=233 guifg=#ff4d4d guibg=#141414 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi Exception ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Float ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Function ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -244,20 +243,20 @@ hi DiffDelete ctermfg=242 ctermbg=210 guifg=#707070 guibg=#ff9999 guisp=NONE cte
 hi DiffText ctermfg=242 ctermbg=222 guifg=#707070 guibg=#ffd699 guisp=NONE cterm=NONE gui=NONE
 hi Directory ctermfg=31 ctermbg=NONE guifg=#5995b3 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi EndOfBuffer ctermfg=231 ctermbg=NONE guifg=#fbfbfb guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=124 ctermbg=231 guifg=#b72e2e guibg=#fbfbfb guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi ErrorMsg ctermfg=231 ctermbg=124 guifg=#fbfbfb guibg=#b72e2e guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Error ctermfg=231 ctermbg=124 guifg=#fbfbfb guibg=#b72e2e guisp=NONE cterm=NONE gui=NONE
+hi! link ErrorMsg Error
 hi Folded ctermfg=242 ctermbg=255 guifg=#696969 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=222 ctermbg=16 guifg=#ffd699 guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi LineNr ctermfg=252 ctermbg=255 guifg=#d3d3d3 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=NONE ctermbg=252 guifg=NONE guibg=#d3d3d3 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi ModeMsg ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi MoreMsg ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi ModeMsg ctermfg=31 ctermbg=NONE guifg=#5995b3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi MoreMsg ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=248 ctermbg=NONE guifg=#a8a8a8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Pmenu ctermfg=236 ctermbg=252 guifg=#333333 guibg=#d3d3d3 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=NONE ctermbg=252 guifg=NONE guibg=#d3d3d3 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=255 ctermbg=31 guifg=#ebebeb guibg=#5995b3 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi PmenuThumb ctermfg=NONE ctermbg=248 guifg=NONE guibg=#a8a8a8 guisp=NONE cterm=NONE gui=NONE
-hi Question ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Question ctermfg=172 ctermbg=NONE guifg=#cc7a00 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
 hi Search ctermfg=222 ctermbg=16 guifg=#ffd699 guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SpecialKey ctermfg=248 ctermbg=NONE guifg=#a8a8a8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -275,7 +274,7 @@ hi TabLineSel ctermfg=236 ctermbg=255 guifg=#333333 guibg=#ebebeb guisp=NONE cte
 hi Title ctermfg=233 ctermbg=NONE guifg=#141414 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Visual ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
 hi! link VisualNOS Visual
-hi WarningMsg ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi WarningMsg ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi WildMenu ctermfg=31 ctermbg=252 guifg=#5995b3 guibg=#d3d3d3 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Boolean ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Character ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -285,7 +284,6 @@ hi Constant ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=N
 hi Define ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Debug ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Delimiter Statement
-hi Error ctermfg=124 ctermbg=231 guifg=#b72e2e guibg=#fbfbfb guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi Exception ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Float ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Function ctermfg=31 ctermbg=NONE guifg=#5995b3 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -408,20 +406,20 @@ finish
 " DiffText                         fg4          brightyellow
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none
-" Error                            red          bg0     bold,reverse
-" ErrorMsg                         bg0          red     bold
+" Error                            bg0          red
+" ErrorMsg                      -> Error
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
 " LineNr                           bg2          bg1
 " MatchParen                       none         bg2     bold
-" ModeMsg                          yellow       none    bold
-" MoreMsg                          yellow       none    bold
+" ModeMsg                          blue         none
+" MoreMsg                          green        none
 " NonText                          bg4          none
 " Pmenu                            fg1          bg2
 " PmenuSbar                        none         bg2
 " PmenuSel                         bg1          blue    bold
 " PmenuThumb                       none         bg4
-" Question                         yellow       none    bold
+" Question                         darkyellow   none
 " QuickFixLine                  -> Search
 " Search                           brightyellow black   reverse
 " SpecialKey                       bg4          none
@@ -439,7 +437,7 @@ finish
 " Title                            fg0          none    bold
 " Visual                           none         bg1
 " VisualNOS                     -> Visual
-" WarningMsg                       red          none    bold
+" WarningMsg                       red          none
 " WildMenu                         blue         bg2     bold
 " Boolean                          magenta      none
 " Character                        magenta      none
@@ -449,7 +447,6 @@ finish
 " Define                           cyan         none
 " Debug                            red          none
 " Delimiter                     -> Statement
-" Error                            red          bg0     bold,reverse
 " Exception                        red          none
 " Float                            magenta      none
 " Function                         blue         none    bold
@@ -543,20 +540,20 @@ finish
 " DiffText                         fg4          brightyellow
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none
-" Error                            red          bg0     bold,reverse
-" ErrorMsg                         bg0          red     bold
+" Error                            bg0          red
+" ErrorMsg                      -> Error
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
 " LineNr                           bg2          bg1
 " MatchParen                       none         bg2     bold
-" ModeMsg                          yellow       none    bold
-" MoreMsg                          yellow       none    bold
+" ModeMsg                          blue         none
+" MoreMsg                          green        none
 " NonText                          bg4          none
 " Pmenu                            fg1          bg2
 " PmenuSbar                        none         bg2
 " PmenuSel                         bg1          blue    bold
 " PmenuThumb                       none         bg4
-" Question                         yellow       none    bold
+" Question                         darkyellow   none
 " QuickFixLine                  -> Search
 " Search                           brightyellow black   reverse
 " SpecialKey                       bg4          none
@@ -574,7 +571,7 @@ finish
 " Title                            fg0          none    bold
 " Visual                           none         bg1
 " VisualNOS                     -> Visual
-" WarningMsg                       red          none    bold
+" WarningMsg                       red          none
 " WildMenu                         blue         bg2     bold
 " Boolean                          magenta      none
 " Character                        magenta      none
@@ -584,7 +581,6 @@ finish
 " Define                           cyan         none
 " Debug                            red          none
 " Delimiter                     -> Statement
-" Error                            red          bg0     bold,reverse
 " Exception                        red          none
 " Float                            magenta      none
 " Function                         blue         none    bold

@@ -35,20 +35,20 @@ DiffDelete                       fg4          brightred
 DiffText                         fg4          brightyellow
 Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
-Error                            red          bg0     bold,reverse
-ErrorMsg                         bg0          red     bold
+Error                            bg0          red
+ErrorMsg                      -> Error
 Folded                           brightblack  bg1     g=italic
 IncSearch                        brightyellow black   reverse
 LineNr                           bg2          bg1
 MatchParen                       none         bg2     bold
-ModeMsg                          yellow       none    bold
-MoreMsg                          yellow       none    bold
+ModeMsg                          blue         none
+MoreMsg                          green        none
 NonText                          bg4          none
 Pmenu                            fg1          bg2
 PmenuSbar                        none         bg2
 PmenuSel                         bg1          blue    bold
 PmenuThumb                       none         bg4
-Question                         yellow       none    bold
+Question                         darkyellow   none
 QuickFixLine                  -> Search
 Search                           brightyellow black   reverse
 SpecialKey                       bg4          none
@@ -66,7 +66,7 @@ TabLineSel                       fg1          bg1
 Title                            fg0          none    bold
 Visual                           none         bg1
 VisualNOS                     -> Visual
-WarningMsg                       red          none    bold
+WarningMsg                       red          none
 WildMenu                         blue         bg2     bold
 # Other conventional group names (see `:help group-name`)
 Boolean                          magenta      none
@@ -77,7 +77,6 @@ Constant                         magenta      none
 Define                           cyan         none
 Debug                            red          none
 Delimiter                     -> Statement
-Error                            red          bg0     bold,reverse
 Exception                        red          none
 Float                            magenta      none
 Function                         blue         none    bold
