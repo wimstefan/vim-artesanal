@@ -39,7 +39,7 @@ Error                            bg0          red
 ErrorMsg                      -> Error
 Folded                           brightblack  bg1     g=italic
 IncSearch                        brightyellow black   reverse
-LineNr                           bg2          bg1
+LineNr                           bg3          bg1
 MatchParen                       none         bg2     bold
 ModeMsg                          blue         none
 MoreMsg                          green        none

@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Thu 05 Apr 2018 01:28:35 AM CEST
+" Last Updated: Sat 07 Apr 2018 05:41:24 AM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -80,7 +80,7 @@ if &background ==# 'dark'
   hi! link ErrorMsg Error
   hi Folded ctermfg=242 ctermbg=236 guifg=#696969 guibg=#333333 guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi LineNr ctermfg=239 ctermbg=236 guifg=#505050 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
+  hi LineNr ctermfg=241 ctermbg=236 guifg=#616161 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
   hi MatchParen ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi ModeMsg ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi MoreMsg ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -247,7 +247,7 @@ hi Error ctermfg=231 ctermbg=124 guifg=#fbfbfb guibg=#b72e2e guisp=NONE cterm=NO
 hi! link ErrorMsg Error
 hi Folded ctermfg=242 ctermbg=255 guifg=#696969 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=222 ctermbg=16 guifg=#ffd699 guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi LineNr ctermfg=252 ctermbg=255 guifg=#d3d3d3 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
+hi LineNr ctermfg=250 ctermbg=255 guifg=#bdbdbd guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=NONE ctermbg=252 guifg=NONE guibg=#d3d3d3 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ModeMsg ctermfg=31 ctermbg=NONE guifg=#5995b3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -410,7 +410,7 @@ finish
 " ErrorMsg                      -> Error
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
-" LineNr                           bg2          bg1
+" LineNr                           bg3          bg1
 " MatchParen                       none         bg2     bold
 " ModeMsg                          blue         none
 " MoreMsg                          green        none
@@ -544,7 +544,7 @@ finish
 " ErrorMsg                      -> Error
 " Folded                           brightblack  bg1     g=italic
 " IncSearch                        brightyellow black   reverse
-" LineNr                           bg2          bg1
+" LineNr                           bg3          bg1
 " MatchParen                       none         bg2     bold
 " ModeMsg                          blue         none
 " MoreMsg                          green        none
