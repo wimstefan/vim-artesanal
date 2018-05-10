@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat 07 Apr 2018 05:41:24 AM CEST
+" Last Updated: Wed 09 May 2018 03:07:14 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -73,7 +73,7 @@ if &background ==# 'dark'
   hi DiffAdd ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
   hi DiffChange ctermfg=242 ctermbg=195 guifg=#707070 guibg=#cceeff guisp=NONE cterm=NONE gui=NONE
   hi DiffDelete ctermfg=242 ctermbg=210 guifg=#707070 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
-  hi DiffText ctermfg=242 ctermbg=229 guifg=#707070 guibg=#ffffaf guisp=NONE cterm=NONE gui=NONE
+  hi DiffText ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
   hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi EndOfBuffer ctermfg=233 ctermbg=NONE guifg=#141414 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Error ctermfg=233 ctermbg=203 guifg=#141414 guibg=#ff4d4d guisp=NONE cterm=NONE gui=NONE
@@ -240,7 +240,7 @@ hi CursorLine ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm
 hi DiffAdd ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
 hi DiffChange ctermfg=242 ctermbg=195 guifg=#707070 guibg=#cceeff guisp=NONE cterm=NONE gui=NONE
 hi DiffDelete ctermfg=242 ctermbg=210 guifg=#707070 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
-hi DiffText ctermfg=242 ctermbg=222 guifg=#707070 guibg=#ffd699 guisp=NONE cterm=NONE gui=NONE
+hi DiffText ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
 hi Directory ctermfg=31 ctermbg=NONE guifg=#5995b3 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi EndOfBuffer ctermfg=231 ctermbg=NONE guifg=#fbfbfb guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Error ctermfg=231 ctermbg=124 guifg=#fbfbfb guibg=#b72e2e guisp=NONE cterm=NONE gui=NONE
@@ -385,16 +385,16 @@ finish
 " Color: darkcyan             #00695c     ~        DarkCyan
 " Color: white                #dcdcdc     ~        Gainsboro
 " Color: brightwhite          #ffffff     ~        White
-"     Normal       fg1           none
-"     CursorLineNr yellow        none
-"     FoldColumn   brightblack   none
-"     SignColumn   fg2           none
-"     VertSplit    bg3           none
-"     Normal       fg1           bg0
-"     CursorLineNr yellow        bg1
-"     FoldColumn   brightblack   bg1
-"     SignColumn   fg2           bg1
-"     VertSplit    bg3           bg0
+"   Normal       fg1           none
+"   CursorLineNr yellow        none
+"   FoldColumn   brightblack   none
+"   SignColumn   fg2           none
+"   VertSplit    bg3           none
+"   Normal       fg1           bg0
+"   CursorLineNr yellow        bg1
+"   FoldColumn   brightblack   bg1
+"   SignColumn   fg2           bg1
+"   VertSplit    bg3           bg0
 " ColorColumn                      none         bg1
 " Conceal                          blue         none
 " Cursor                           none         none    reverse
@@ -403,7 +403,7 @@ finish
 " DiffAdd                          fg4          brightgreen
 " DiffChange                       fg4          brightblue
 " DiffDelete                       fg4          brightred
-" DiffText                         fg4          brightyellow
+" DiffText                         fg4          brightgreen
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none
 " Error                            bg0          red
@@ -519,16 +519,16 @@ finish
 " Color: darkcyan             #00695c     ~        DarkCyan
 " Color: white                #dcdcdc     ~        Gainsboro
 " Color: brightwhite          #ffffff     ~        White
-"     Normal       fg1           none
-"     CursorLineNr yellow        none
-"     FoldColumn   brightblack   none
-"     SignColumn   fg2           none
-"     VertSplit    bg3           none
-"     Normal       fg1           bg0
-"     CursorLineNr yellow        bg1
-"     FoldColumn   brightblack   bg1
-"     SignColumn   fg2           bg1
-"     VertSplit    bg3           bg0
+"   Normal       fg1           none
+"   CursorLineNr yellow        none
+"   FoldColumn   brightblack   none
+"   SignColumn   fg2           none
+"   VertSplit    bg3           none
+"   Normal       fg1           bg0
+"   CursorLineNr yellow        bg1
+"   FoldColumn   brightblack   bg1
+"   SignColumn   fg2           bg1
+"   VertSplit    bg3           bg0
 " ColorColumn                      none         bg1
 " Conceal                          blue         none
 " Cursor                           none         none    reverse
@@ -537,7 +537,7 @@ finish
 " DiffAdd                          fg4          brightgreen
 " DiffChange                       fg4          brightblue
 " DiffDelete                       fg4          brightred
-" DiffText                         fg4          brightyellow
+" DiffText                         fg4          brightgreen
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none
 " Error                            bg0          red

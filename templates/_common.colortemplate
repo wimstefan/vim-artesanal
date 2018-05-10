@@ -4,21 +4,21 @@
 verbatim
 if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
 endverbatim
-    # Transparent background
-    Normal       fg1           none
-    CursorLineNr yellow        none
-    FoldColumn   brightblack   none
-    SignColumn   fg2           none
-    VertSplit    bg3           none
+  # Transparent background
+  Normal       fg1           none
+  CursorLineNr yellow        none
+  FoldColumn   brightblack   none
+  SignColumn   fg2           none
+  VertSplit    bg3           none
 verbatim
 else
 endverbatim
-    # Opaque background
-    Normal       fg1           bg0
-    CursorLineNr yellow        bg1
-    FoldColumn   brightblack   bg1
-    SignColumn   fg2           bg1
-    VertSplit    bg3           bg0
+  # Opaque background
+  Normal       fg1           bg0
+  CursorLineNr yellow        bg1
+  FoldColumn   brightblack   bg1
+  SignColumn   fg2           bg1
+  VertSplit    bg3           bg0
 verbatim
 endif
 endverbatim
@@ -32,7 +32,7 @@ CursorLine                       none         bg1     bold,italic
 DiffAdd                          fg4          brightgreen
 DiffChange                       fg4          brightblue
 DiffDelete                       fg4          brightred
-DiffText                         fg4          brightyellow
+DiffText                         fg4          brightgreen
 Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
 Error                            bg0          red
