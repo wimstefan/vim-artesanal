@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat 21 Jul 2018 03:45:52 PM CEST
+" Last Updated: Sat 21 Jul 2018 04:03:46 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -39,7 +39,7 @@ if &background ==# 'dark'
   hi! link CursorColumn CursorLine
   hi CursorLine ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE,bold,italic gui=NONE,bold,italic
   hi DiffAdd ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
-  hi DiffChange ctermfg=242 ctermbg=195 guifg=#707070 guibg=#cceeff guisp=NONE cterm=NONE gui=NONE
+  hi DiffChange ctermfg=242 ctermbg=117 guifg=#707070 guibg=#a1c8db guisp=NONE cterm=NONE gui=NONE
   hi DiffDelete ctermfg=242 ctermbg=210 guifg=#707070 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
   hi DiffText ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
   hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -145,7 +145,7 @@ if &background ==# 'dark'
         \ '#ff9999',
         \ '#b3ffcc',
         \ '#ffffaf',
-        \ '#cceeff',
+        \ '#a1c8db',
         \ '#d1c4e9',
         \ '#b2dfdb',
         \ '#d3d3d3'
@@ -445,7 +445,7 @@ finish
 " Color: brightyellow         #ffffaf     ~        LightYellow
 " Color: darkyellow           #ffea00     ~        DarkYellow
 " Color: blue                 #7ab1cc     ~        Blue
-" Color: brightblue           #cceeff     ~        LightBlue
+" Color: brightblue           #a1c8db     ~        LightBlue
 " Color: darkblue             #266280     ~        DarkBlue
 " Color: magenta              #ab47bc     ~        Magenta
 " Color: brightmagenta        #d1c4e9     ~        LightMagenta
