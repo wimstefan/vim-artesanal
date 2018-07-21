@@ -28,10 +28,10 @@ Color: fg0 #fbfbfb ~
 Color: fg1 #ebebeb ~
 Color: fg2 #d3d3d3 ~
 Color: fg4 #707070 ~
-Color: bg0 #141414 ~
-Color: bg1 #333333 ~
-Color: bg2 #505050 ~
-Color: bg3 #616161 ~
-Color: bg4 #727272 ~
+Color: bg0 #2e3440 ~
+Color: bg1 #424853 ~
+Color: bg2 #575c66 ~
+Color: bg3 #6c7079 ~
+Color: bg4 #81858c ~
 Include: _dark.colortemplate
 

@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed 09 May 2018 03:07:14 PM CEST
+" Last Updated: Sat 21 Jul 2018 03:45:52 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -20,95 +20,63 @@ endif
 let g:colors_name = 'artesanal'
 
 if &background ==# 'dark'
-  " Color similarity table (dark background)
-  "         black: GUI=#000000/rgb(  0,  0,  0)  Term= 16 #000000/rgb(  0,  0,  0)  [delta=0.000000]
-  "  brightyellow: GUI=#ffffaf/rgb(255,255,175)  Term=229 #ffffaf/rgb(255,255,175)  [delta=0.000000]
-  "   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
-  "           bg3: GUI=#616161/rgb( 97, 97, 97)  Term=241 #626262/rgb( 98, 98, 98)  [delta=0.368854]
-  "         white: GUI=#dcdcdc/rgb(220,220,220)  Term=253 #dadada/rgb(218,218,218)  [delta=0.455975]
-  "           bg0: GUI=#141414/rgb( 20, 20, 20)  Term=233 #121212/rgb( 18, 18, 18)  [delta=0.515624]
-  "           fg1: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
-  "           bg2: GUI=#505050/rgb( 80, 80, 80)  Term=239 #4e4e4e/rgb( 78, 78, 78)  [delta=0.689525]
-  "           fg2: GUI=#d3d3d3/rgb(211,211,211)  Term=252 #d0d0d0/rgb(208,208,208)  [delta=0.713123]
-  "           fg0: GUI=#fbfbfb/rgb(251,251,251)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.795722]
-  "       darkred: GUI=#b30000/rgb(179,  0,  0)  Term=124 #af0000/rgb(175,  0,  0)  [delta=0.799362]
-  "        yellow: GUI=#ffff80/rgb(255,255,128)  Term=228 #ffff87/rgb(255,255,135)  [delta=0.859693]
-  "           bg1: GUI=#333333/rgb( 51, 51, 51)  Term=236 #303030/rgb( 48, 48, 48)  [delta=0.961402]
-  "   brightblack: GUI=#696969/rgb(105,105,105)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=1.151169]
-  "           fg4: GUI=#707070/rgb(112,112,112)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=1.558945]
-  "           bg4: GUI=#727272/rgb(114,114,114)  Term=243 #767676/rgb(118,118,118)  [delta=1.588827]
-  "    brightcyan: GUI=#b2dfdb/rgb(178,223,219)  Term=152 #afd7d7/rgb(175,215,215)  [delta=2.696709]
-  "   brightgreen: GUI=#b3ffcc/rgb(179,255,204)  Term=158 #afffd7/rgb(175,255,215)  [delta=3.041362]
-  "         green: GUI=#47b36b/rgb( 71,179,107)  Term= 35 #00af5f/rgb(  0,175, 95)  [delta=3.445808]
-  "           red: GUI=#ff4d4d/rgb(255, 77, 77)  Term=203 #ff5f5f/rgb(255, 95, 95)  [delta=3.492015]
-  "      darkblue: GUI=#266280/rgb( 38, 98,128)  Term= 24 #005f87/rgb(  0, 95,135)  [delta=3.714150]
-  "     brightred: GUI=#ff9999/rgb(255,153,153)  Term=210 #ff8787/rgb(255,135,135)  [delta=4.179329]
-  "          blue: GUI=#7ab1cc/rgb(122,177,204)  Term= 74 #5fafd7/rgb( 95,175,215)  [delta=4.276048]
-  "   darkmagenta: GUI=#4527a0/rgb( 69, 39,160)  Term= 55 #5f00af/rgb( 95,  0,175)  [delta=5.173706]
-  " brightmagenta: GUI=#d1c4e9/rgb(209,196,233)  Term=189 #d7d7ff/rgb(215,215,255)  [delta=5.536146]
-  "    darkyellow: GUI=#ffea00/rgb(255,234,  0)  Term=226 #ffff00/rgb(255,255,  0)  [delta=5.745583]
-  "      darkcyan: GUI=#00695c/rgb(  0,105, 92)  Term= 23 #005f5f/rgb(  0, 95, 95)  [delta=6.224963]
-  "     darkgreen: GUI=#268044/rgb( 38,128, 68)  Term= 29 #00875f/rgb(  0,135, 95)  [delta=6.622343]
-  "       magenta: GUI=#ab47bc/rgb(171, 71,188)  Term=133 #af5faf/rgb(175, 95,175)  [delta=6.806495]
-  "          cyan: GUI=#009688/rgb(  0,150,136)  Term= 30 #008787/rgb(  0,135,135)  [delta=7.127207]
-  "    brightblue: GUI=#cceeff/rgb(204,238,255)  Term=195 #d7ffff/rgb(215,255,255)  [delta=9.196998]
   if !has('gui_running') && get(g:, 'artesanal_transp_bg', 0)
     hi Normal ctermfg=255 ctermbg=NONE guifg=#ebebeb guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi CursorLineNr ctermfg=228 ctermbg=NONE guifg=#ffff80 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=242 ctermbg=NONE guifg=#696969 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi SignColumn ctermfg=252 ctermbg=NONE guifg=#d3d3d3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi VertSplit ctermfg=241 ctermbg=NONE guifg=#616161 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=242 ctermbg=NONE guifg=#6c7079 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   else
-    hi Normal ctermfg=255 ctermbg=233 guifg=#ebebeb guibg=#141414 guisp=NONE cterm=NONE gui=NONE
-    hi CursorLineNr ctermfg=228 ctermbg=236 guifg=#ffff80 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
-    hi FoldColumn ctermfg=242 ctermbg=236 guifg=#696969 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
-    hi SignColumn ctermfg=252 ctermbg=236 guifg=#d3d3d3 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
-    hi VertSplit ctermfg=241 ctermbg=233 guifg=#616161 guibg=#141414 guisp=NONE cterm=NONE gui=NONE
+    hi Normal ctermfg=255 ctermbg=236 guifg=#ebebeb guibg=#2e3440 guisp=NONE cterm=NONE gui=NONE
+    hi CursorLineNr ctermfg=228 ctermbg=238 guifg=#ffff80 guibg=#424853 guisp=NONE cterm=NONE gui=NONE
+    hi FoldColumn ctermfg=242 ctermbg=238 guifg=#696969 guibg=#424853 guisp=NONE cterm=NONE gui=NONE
+    hi SignColumn ctermfg=252 ctermbg=238 guifg=#d3d3d3 guibg=#424853 guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=242 ctermbg=236 guifg=#6c7079 guibg=#2e3440 guisp=NONE cterm=NONE gui=NONE
   endif
-  hi ColorColumn ctermfg=NONE ctermbg=236 guifg=NONE guibg=#333333 guisp=NONE cterm=NONE gui=NONE
+  hi ColorColumn ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE gui=NONE
   hi Conceal ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi! link CursorColumn CursorLine
-  hi CursorLine ctermfg=NONE ctermbg=236 guifg=NONE guibg=#333333 guisp=NONE cterm=NONE,bold,italic gui=NONE,bold,italic
+  hi CursorLine ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE,bold,italic gui=NONE,bold,italic
   hi DiffAdd ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
   hi DiffChange ctermfg=242 ctermbg=195 guifg=#707070 guibg=#cceeff guisp=NONE cterm=NONE gui=NONE
   hi DiffDelete ctermfg=242 ctermbg=210 guifg=#707070 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
   hi DiffText ctermfg=242 ctermbg=158 guifg=#707070 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
   hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi EndOfBuffer ctermfg=233 ctermbg=NONE guifg=#141414 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi Error ctermfg=233 ctermbg=203 guifg=#141414 guibg=#ff4d4d guisp=NONE cterm=NONE gui=NONE
+  hi EndOfBuffer ctermfg=236 ctermbg=NONE guifg=#2e3440 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Error ctermfg=236 ctermbg=203 guifg=#2e3440 guibg=#ff4d4d guisp=NONE cterm=NONE gui=NONE
   hi! link ErrorMsg Error
-  hi Folded ctermfg=242 ctermbg=236 guifg=#696969 guibg=#333333 guisp=NONE cterm=NONE gui=NONE,italic
+  hi Folded ctermfg=242 ctermbg=238 guifg=#696969 guibg=#424853 guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi LineNr ctermfg=241 ctermbg=236 guifg=#616161 guibg=#333333 guisp=NONE cterm=NONE gui=NONE
-  hi MatchParen ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi LineNr ctermfg=242 ctermbg=238 guifg=#6c7079 guibg=#424853 guisp=NONE cterm=NONE gui=NONE
+  hi MatchParen ctermfg=NONE ctermbg=59 guifg=NONE guibg=#575c66 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi ModeMsg ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi MoreMsg ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi NonText ctermfg=243 ctermbg=NONE guifg=#727272 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi Pmenu ctermfg=255 ctermbg=239 guifg=#ebebeb guibg=#505050 guisp=NONE cterm=NONE gui=NONE
-  hi PmenuSbar ctermfg=NONE ctermbg=239 guifg=NONE guibg=#505050 guisp=NONE cterm=NONE gui=NONE
-  hi PmenuSel ctermfg=236 ctermbg=74 guifg=#333333 guibg=#7ab1cc guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi PmenuThumb ctermfg=NONE ctermbg=243 guifg=NONE guibg=#727272 guisp=NONE cterm=NONE gui=NONE
+  hi NonText ctermfg=102 ctermbg=NONE guifg=#81858c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Pmenu ctermfg=255 ctermbg=59 guifg=#ebebeb guibg=#575c66 guisp=NONE cterm=NONE gui=NONE
+  hi PmenuSbar ctermfg=NONE ctermbg=59 guifg=NONE guibg=#575c66 guisp=NONE cterm=NONE gui=NONE
+  hi PmenuSel ctermfg=238 ctermbg=74 guifg=#424853 guibg=#7ab1cc guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi PmenuThumb ctermfg=NONE ctermbg=102 guifg=NONE guibg=#81858c guisp=NONE cterm=NONE gui=NONE
   hi Question ctermfg=226 ctermbg=NONE guifg=#ffea00 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link QuickFixLine Search
   hi Search ctermfg=229 ctermbg=16 guifg=#ffffaf guibg=#000000 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi SpecialKey ctermfg=243 ctermbg=NONE guifg=#727272 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi SpecialKey ctermfg=102 ctermbg=NONE guifg=#81858c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SpellBad ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=#ff4d4d cterm=NONE,underline gui=NONE,italic,undercurl
   hi SpellCap ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=#7ab1cc cterm=NONE,underline gui=NONE,italic,undercurl
   hi SpellLocal ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=#009688 cterm=NONE,underline gui=NONE,italic,undercurl
   hi SpellRare ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=#ab47bc cterm=NONE,underline gui=NONE,italic,undercurl
-  hi StatusLine ctermfg=239 ctermbg=255 guifg=#505050 guibg=#ebebeb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi StatusLineNC ctermfg=236 ctermbg=252 guifg=#333333 guibg=#d3d3d3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi StatusLine ctermfg=59 ctermbg=255 guifg=#575c66 guibg=#ebebeb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi StatusLineNC ctermfg=238 ctermbg=252 guifg=#424853 guibg=#d3d3d3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
   hi! link TabLine TabLineFill
-  hi TabLineFill ctermfg=252 ctermbg=241 guifg=#d3d3d3 guibg=#616161 guisp=NONE cterm=NONE gui=NONE
-  hi TabLineSel ctermfg=255 ctermbg=236 guifg=#ebebeb guibg=#333333 guisp=NONE cterm=NONE gui=NONE
+  hi TabLineFill ctermfg=252 ctermbg=242 guifg=#d3d3d3 guibg=#6c7079 guisp=NONE cterm=NONE gui=NONE
+  hi TabLineSel ctermfg=255 ctermbg=238 guifg=#ebebeb guibg=#424853 guisp=NONE cterm=NONE gui=NONE
   hi Title ctermfg=231 ctermbg=NONE guifg=#fbfbfb guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi Visual ctermfg=NONE ctermbg=236 guifg=NONE guibg=#333333 guisp=NONE cterm=NONE gui=NONE
+  hi Visual ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE gui=NONE
   hi! link VisualNOS Visual
   hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#ff4d4d guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi WildMenu ctermfg=74 ctermbg=239 guifg=#7ab1cc guibg=#505050 guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi WildMenu ctermfg=74 ctermbg=59 guifg=#7ab1cc guibg=#575c66 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi Boolean ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Character ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Comment ctermfg=242 ctermbg=NONE guifg=#696969 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
@@ -139,14 +107,14 @@ if &background ==# 'dark'
   hi String ctermfg=35 ctermbg=NONE guifg=#47b36b guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Structure ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Tag Special
-  hi Todo ctermfg=fg ctermbg=233 guifg=fg guibg=#141414 guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
+  hi Todo ctermfg=fg ctermbg=236 guifg=fg guibg=#2e3440 guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
   hi Type ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Typedef ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Underlined ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi! link lCursor Cursor
   hi CursorIM ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi ToolbarLine ctermfg=NONE ctermbg=241 guifg=NONE guibg=#616161 guisp=NONE cterm=NONE gui=NONE
-  hi ToolbarButton ctermfg=231 ctermbg=241 guifg=#fbfbfb guibg=#616161 guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi ToolbarLine ctermfg=NONE ctermbg=242 guifg=NONE guibg=#6c7079 guisp=NONE cterm=NONE gui=NONE
+  hi ToolbarButton ctermfg=231 ctermbg=242 guifg=#fbfbfb guibg=#6c7079 guisp=NONE cterm=NONE,bold gui=NONE,bold
   if get(g:, "artesanal_italic", 0)
     hi Comment cterm=italic
     hi Folded cterm=italic
@@ -158,67 +126,35 @@ if &background ==# 'dark'
   endif
   hi! link iCursor Cursor
   hi! link vCursor Cursor
-  hi NormalMode ctermfg=252 ctermbg=233 guifg=#d3d3d3 guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi InsertMode ctermfg=74 ctermbg=233 guifg=#7ab1cc guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi ReplaceMode ctermfg=30 ctermbg=233 guifg=#009688 guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi VisualMode ctermfg=228 ctermbg=233 guifg=#ffff80 guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi CommandMode ctermfg=133 ctermbg=233 guifg=#ab47bc guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi Warnings ctermfg=228 ctermbg=233 guifg=#ffff80 guibg=#141414 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  if has('terminal')
-    let g:terminal_color_0  = '#141414'
-    let g:terminal_color_8  = '#696969'
-    let g:terminal_color_1  = '#ff4d4d'
-    let g:terminal_color_9  = '#ff9999'
-    let g:terminal_color_2  = '#47b36b'
-    let g:terminal_color_10 = '#b3ffcc'
-    let g:terminal_color_3  = '#ffff80'
-    let g:terminal_color_11 = '#ffffaf'
-    let g:terminal_color_4  = '#7ab1cc'
-    let g:terminal_color_12 = '#cceeff'
-    let g:terminal_color_5  = '#ab47bc'
-    let g:terminal_color_13 = '#d1c4e9'
-    let g:terminal_color_6  = '#009688'
-    let g:terminal_color_14 = '#b2dfdb'
-    let g:terminal_color_7  = '#fbfbfb'
-    let g:terminal_color_15 = '#d3d3d3'
-  endif
+  hi NormalMode ctermfg=252 ctermbg=236 guifg=#d3d3d3 guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi InsertMode ctermfg=74 ctermbg=236 guifg=#7ab1cc guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi ReplaceMode ctermfg=30 ctermbg=236 guifg=#009688 guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi VisualMode ctermfg=228 ctermbg=236 guifg=#ffff80 guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi CommandMode ctermfg=133 ctermbg=236 guifg=#ab47bc guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi Warnings ctermfg=228 ctermbg=236 guifg=#ffff80 guibg=#2e3440 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  let g:terminal_ansi_colors = [
+        \ '#2e3440',
+        \ '#ff4d4d',
+        \ '#47b36b',
+        \ '#ffff80',
+        \ '#7ab1cc',
+        \ '#ab47bc',
+        \ '#009688',
+        \ '#fbfbfb',
+        \ '#696969',
+        \ '#ff9999',
+        \ '#b3ffcc',
+        \ '#ffffaf',
+        \ '#cceeff',
+        \ '#d1c4e9',
+        \ '#b2dfdb',
+        \ '#d3d3d3'
+        \ ]
   hi! link TermCursor Cursor
-  hi TermCursorNC ctermfg=236 ctermbg=255 guifg=#333333 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
+  hi TermCursorNC ctermfg=238 ctermbg=255 guifg=#424853 guibg=#ebebeb guisp=NONE cterm=NONE gui=NONE
   finish
 endif
 
-" Color similarity table (light background)
-"         black: GUI=#000000/rgb(  0,  0,  0)  Term= 16 #000000/rgb(  0,  0,  0)  [delta=0.000000]
-"           bg4: GUI=#a8a8a8/rgb(168,168,168)  Term=248 #a8a8a8/rgb(168,168,168)  [delta=0.000000]
-"   brightwhite: GUI=#ffffff/rgb(255,255,255)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.000000]
-"           bg3: GUI=#bdbdbd/rgb(189,189,189)  Term=250 #bcbcbc/rgb(188,188,188)  [delta=0.262501]
-"         white: GUI=#dcdcdc/rgb(220,220,220)  Term=253 #dadada/rgb(218,218,218)  [delta=0.455975]
-"           fg0: GUI=#141414/rgb( 20, 20, 20)  Term=233 #121212/rgb( 18, 18, 18)  [delta=0.515624]
-"           bg1: GUI=#ebebeb/rgb(235,235,235)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.636113]
-"           fg2: GUI=#505050/rgb( 80, 80, 80)  Term=239 #4e4e4e/rgb( 78, 78, 78)  [delta=0.689525]
-"           bg2: GUI=#d3d3d3/rgb(211,211,211)  Term=252 #d0d0d0/rgb(208,208,208)  [delta=0.713123]
-"           bg0: GUI=#fbfbfb/rgb(251,251,251)  Term=231 #ffffff/rgb(255,255,255)  [delta=0.795722]
-"           fg1: GUI=#333333/rgb( 51, 51, 51)  Term=236 #303030/rgb( 48, 48, 48)  [delta=0.961402]
-"   brightblack: GUI=#696969/rgb(105,105,105)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=1.151169]
-"           fg4: GUI=#707070/rgb(112,112,112)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=1.558945]
-"       darkred: GUI=#a30000/rgb(163,  0,  0)  Term=124 #af0000/rgb(175,  0,  0)  [delta=2.390642]
-"    brightcyan: GUI=#b2dfdb/rgb(178,223,219)  Term=152 #afd7d7/rgb(175,215,215)  [delta=2.696709]
-"   brightgreen: GUI=#b3ffcc/rgb(179,255,204)  Term=158 #afffd7/rgb(175,255,215)  [delta=3.041362]
-"         green: GUI=#47b36b/rgb( 71,179,107)  Term= 35 #00af5f/rgb(  0,175, 95)  [delta=3.445808]
-"      darkblue: GUI=#266280/rgb( 38, 98,128)  Term= 24 #005f87/rgb(  0, 95,135)  [delta=3.714150]
-"  brightyellow: GUI=#ffd699/rgb(255,214,153)  Term=222 #ffd787/rgb(255,215,135)  [delta=4.020486]
-"     brightred: GUI=#ff9999/rgb(255,153,153)  Term=210 #ff8787/rgb(255,135,135)  [delta=4.179329]
-"    darkyellow: GUI=#cc7a00/rgb(204,122,  0)  Term=172 #d78700/rgb(215,135,  0)  [delta=4.383031]
-"   darkmagenta: GUI=#4527a0/rgb( 69, 39,160)  Term= 55 #5f00af/rgb( 95,  0,175)  [delta=5.173706]
-" brightmagenta: GUI=#d1c4e9/rgb(209,196,233)  Term=189 #d7d7ff/rgb(215,215,255)  [delta=5.536146]
-"        yellow: GUI=#ff9900/rgb(255,153,  0)  Term=208 #ff8700/rgb(255,135,  0)  [delta=6.094939]
-"      darkcyan: GUI=#00695c/rgb(  0,105, 92)  Term= 23 #005f5f/rgb(  0, 95, 95)  [delta=6.224963]
-"     darkgreen: GUI=#268044/rgb( 38,128, 68)  Term= 29 #00875f/rgb(  0,135, 95)  [delta=6.622343]
-"       magenta: GUI=#ab47bc/rgb(171, 71,188)  Term=133 #af5faf/rgb(175, 95,175)  [delta=6.806495]
-"          cyan: GUI=#009688/rgb(  0,150,136)  Term= 30 #008787/rgb(  0,135,135)  [delta=7.127207]
-"          blue: GUI=#5995b3/rgb( 89,149,179)  Term= 31 #0087af/rgb(  0,135,175)  [delta=7.422120]
-"           red: GUI=#b72e2e/rgb(183, 46, 46)  Term=124 #af0000/rgb(175,  0,  0)  [delta=8.068751]
-"    brightblue: GUI=#cceeff/rgb(204,238,255)  Term=195 #d7ffff/rgb(215,255,255)  [delta=9.196998]
 if !has('gui_running') && get(g:, 'artesanal_transp_bg', 0)
   hi Normal ctermfg=236 ctermbg=NONE guifg=#333333 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi CursorLineNr ctermfg=208 ctermbg=NONE guifg=#ff9900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -331,24 +267,24 @@ hi ReplaceMode ctermfg=30 ctermbg=231 guifg=#009688 guibg=#fbfbfb guisp=NONE cte
 hi VisualMode ctermfg=208 ctermbg=231 guifg=#ff9900 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi CommandMode ctermfg=133 ctermbg=231 guifg=#ab47bc guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Warnings ctermfg=208 ctermbg=231 guifg=#ff9900 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-if has('terminal')
-  let g:terminal_color_0  = '#fbfbfb'
-  let g:terminal_color_8  = '#696969'
-  let g:terminal_color_1  = '#b72e2e'
-  let g:terminal_color_9  = '#ff9999'
-  let g:terminal_color_2  = '#47b36b'
-  let g:terminal_color_10 = '#b3ffcc'
-  let g:terminal_color_3  = '#ff9900'
-  let g:terminal_color_11 = '#ffd699'
-  let g:terminal_color_4  = '#5995b3'
-  let g:terminal_color_12 = '#cceeff'
-  let g:terminal_color_5  = '#ab47bc'
-  let g:terminal_color_13 = '#d1c4e9'
-  let g:terminal_color_6  = '#009688'
-  let g:terminal_color_14 = '#b2dfdb'
-  let g:terminal_color_7  = '#141414'
-  let g:terminal_color_15 = '#505050'
-endif
+let g:terminal_ansi_colors = [
+      \ '#fbfbfb',
+      \ '#b72e2e',
+      \ '#47b36b',
+      \ '#ff9900',
+      \ '#5995b3',
+      \ '#ab47bc',
+      \ '#009688',
+      \ '#141414',
+      \ '#696969',
+      \ '#ff9999',
+      \ '#b3ffcc',
+      \ '#ffd699',
+      \ '#cceeff',
+      \ '#d1c4e9',
+      \ '#b2dfdb',
+      \ '#505050'
+      \ ]
 hi! link TermCursor Cursor
 hi TermCursorNC ctermfg=255 ctermbg=236 guifg=#ebebeb guibg=#333333 guisp=NONE cterm=NONE gui=NONE
 finish
@@ -492,11 +428,11 @@ finish
 " Color: fg1 #ebebeb ~
 " Color: fg2 #d3d3d3 ~
 " Color: fg4 #707070 ~
-" Color: bg0 #141414 ~
-" Color: bg1 #333333 ~
-" Color: bg2 #505050 ~
-" Color: bg3 #616161 ~
-" Color: bg4 #727272 ~
+" Color: bg0 #2e3440 ~
+" Color: bg1 #424853 ~
+" Color: bg2 #575c66 ~
+" Color: bg3 #6c7079 ~
+" Color: bg4 #81858c ~
 " Color: black                #000000     ~        Black
 " Color: brightblack          #696969     ~        DimGray
 " Color: red                  #ff4d4d     ~        Red
