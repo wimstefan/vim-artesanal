@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat 21 Jul 2018 04:03:46 PM CEST
+" Last Updated: Wed 14 Nov 2018 01:13:55 AM CET
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -141,13 +141,13 @@ if &background ==# 'dark'
         \ '#ab47bc',
         \ '#009688',
         \ '#fbfbfb',
-        \ '#696969',
-        \ '#ff9999',
-        \ '#b3ffcc',
-        \ '#ffffaf',
-        \ '#a1c8db',
-        \ '#d1c4e9',
-        \ '#b2dfdb',
+        \ '#2e3440',
+        \ '#ff4d4d',
+        \ '#47b36b',
+        \ '#ffff80',
+        \ '#7ab1cc',
+        \ '#ab47bc',
+        \ '#009688',
         \ '#d3d3d3'
         \ ]
   hi! link TermCursor Cursor
@@ -276,13 +276,13 @@ let g:terminal_ansi_colors = [
       \ '#ab47bc',
       \ '#009688',
       \ '#141414',
-      \ '#696969',
-      \ '#ff9999',
-      \ '#b3ffcc',
-      \ '#ffd699',
-      \ '#cceeff',
-      \ '#d1c4e9',
-      \ '#b2dfdb',
+      \ '#fbfbfb',
+      \ '#b72e2e',
+      \ '#47b36b',
+      \ '#ff9900',
+      \ '#5995b3',
+      \ '#ab47bc',
+      \ '#009688',
       \ '#505050'
       \ ]
 hi! link TermCursor Cursor

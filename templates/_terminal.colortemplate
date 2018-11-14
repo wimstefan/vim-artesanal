@@ -10,13 +10,13 @@ let g:terminal_ansi_colors = [
     \ '@guimagenta',
     \ '@guicyan',
     \ '@guifg0',
-    \ '@guibrightblack',
-    \ '@guibrightred',
-    \ '@guibrightgreen',
-    \ '@guibrightyellow',
-    \ '@guibrightblue',
-    \ '@guibrightmagenta',
-    \ '@guibrightcyan',
+    \ '@guibg0',
+    \ '@guired',
+    \ '@guigreen',
+    \ '@guiyellow',
+    \ '@guiblue',
+    \ '@guimagenta',
+    \ '@guicyan',
     \ '@guifg2'
 \ ]
 endverbatim
