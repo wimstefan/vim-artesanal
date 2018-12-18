@@ -29,10 +29,10 @@ Conceal                          blue         none
 Cursor                           none         none    reverse
 CursorColumn                  -> CursorLine
 CursorLine                       none         bg1     bold,italic
-DiffAdd                          fg4          brightgreen
-DiffChange                       fg4          brightblue
-DiffDelete                       fg4          brightred
-DiffText                         fg4          brightgreen
+DiffAdd                          fg0          brightgreen
+DiffChange                       fg0          brightblue
+DiffDelete                       fg0          brightred
+DiffText                         fg0          brightgreen
 Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
 Error                            bg0          red
@@ -46,7 +46,7 @@ MoreMsg                          green        none
 NonText                          bg4          none
 Pmenu                            fg1          bg2
 PmenuSbar                        none         bg2
-PmenuSel                         bg1          blue    bold
+PmenuSel                         bg1          fg2    bold
 PmenuThumb                       none         bg4
 Question                         darkyellow   none
 QuickFixLine                  -> Search
