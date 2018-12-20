@@ -28,7 +28,7 @@ ColorColumn                      none         bg1
 Conceal                          blue         none
 Cursor                           none         none    reverse
 CursorColumn                  -> CursorLine
-CursorLine                       none         bg1     bold,italic
+CursorLine                       none         bg1     bold
 DiffAdd                          fg0          brightgreen
 DiffChange                       fg0          brightblue
 DiffDelete                       fg0          brightred

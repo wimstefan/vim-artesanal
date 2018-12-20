@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 20 Nov 2018 11:33:55 PM CET
+" Last Updated: Thu 20 Dec 2018 03:05:22 PM CET
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -37,7 +37,7 @@ if &background ==# 'dark'
   hi Conceal ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi! link CursorColumn CursorLine
-  hi CursorLine ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE,bold,italic gui=NONE,bold,italic
+  hi CursorLine ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi DiffAdd ctermfg=231 ctermbg=65 guifg=#fbfbfb guibg=#4c8c6c guisp=NONE cterm=NONE gui=NONE
   hi DiffChange ctermfg=231 ctermbg=67 guifg=#fbfbfb guibg=#5f87af guisp=NONE cterm=NONE gui=NONE
   hi DiffDelete ctermfg=231 ctermbg=167 guifg=#fbfbfb guibg=#d66363 guisp=NONE cterm=NONE gui=NONE
@@ -172,7 +172,7 @@ hi ColorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cter
 hi Conceal ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link CursorColumn CursorLine
-hi CursorLine ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm=NONE,bold,italic gui=NONE,bold,italic
+hi CursorLine ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi DiffAdd ctermfg=233 ctermbg=158 guifg=#141414 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
 hi DiffChange ctermfg=233 ctermbg=153 guifg=#141414 guibg=#afc3d7 guisp=NONE cterm=NONE gui=NONE
 hi DiffDelete ctermfg=233 ctermbg=210 guifg=#141414 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
@@ -335,7 +335,7 @@ finish
 " Conceal                          blue         none
 " Cursor                           none         none    reverse
 " CursorColumn                  -> CursorLine
-" CursorLine                       none         bg1     bold,italic
+" CursorLine                       none         bg1     bold
 " DiffAdd                          fg0          brightgreen
 " DiffChange                       fg0          brightblue
 " DiffDelete                       fg0          brightred
@@ -469,7 +469,7 @@ finish
 " Conceal                          blue         none
 " Cursor                           none         none    reverse
 " CursorColumn                  -> CursorLine
-" CursorLine                       none         bg1     bold,italic
+" CursorLine                       none         bg1     bold
 " DiffAdd                          fg0          brightgreen
 " DiffChange                       fg0          brightblue
 " DiffDelete                       fg0          brightred
