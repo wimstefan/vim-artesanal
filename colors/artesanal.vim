@@ -4,7 +4,7 @@
 " Maintainer:   Stefan Wimmer <wimstefan@gmail.com>
 " Website:      https://github.com/wimstefan/vim-artesanal
 " License:      Vim License (see `:help license`)
-" Last Updated: Thu 20 Dec 2018 03:05:22 PM CET
+" Last Updated: Wed 26 Dec 2018 01:47:50 AM CET
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -39,8 +39,10 @@ if &background ==# 'dark'
   hi! link CursorColumn CursorLine
   hi CursorLine ctermfg=NONE ctermbg=238 guifg=NONE guibg=#424853 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi DiffAdd ctermfg=231 ctermbg=65 guifg=#fbfbfb guibg=#4c8c6c guisp=NONE cterm=NONE gui=NONE
+  hi DiffAdded ctermfg=231 ctermbg=65 guifg=#fbfbfb guibg=#4c8c6c guisp=NONE cterm=NONE gui=NONE
   hi DiffChange ctermfg=231 ctermbg=67 guifg=#fbfbfb guibg=#5f87af guisp=NONE cterm=NONE gui=NONE
   hi DiffDelete ctermfg=231 ctermbg=167 guifg=#fbfbfb guibg=#d66363 guisp=NONE cterm=NONE gui=NONE
+  hi DiffRemoved ctermfg=231 ctermbg=167 guifg=#fbfbfb guibg=#d66363 guisp=NONE cterm=NONE gui=NONE
   hi DiffText ctermfg=231 ctermbg=65 guifg=#fbfbfb guibg=#4c8c6c guisp=NONE cterm=NONE gui=NONE
   hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi EndOfBuffer ctermfg=236 ctermbg=NONE guifg=#2e3440 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -174,8 +176,10 @@ hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,
 hi! link CursorColumn CursorLine
 hi CursorLine ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi DiffAdd ctermfg=233 ctermbg=158 guifg=#141414 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
+hi DiffAdded ctermfg=233 ctermbg=158 guifg=#141414 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
 hi DiffChange ctermfg=233 ctermbg=153 guifg=#141414 guibg=#afc3d7 guisp=NONE cterm=NONE gui=NONE
 hi DiffDelete ctermfg=233 ctermbg=210 guifg=#141414 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
+hi DiffRemoved ctermfg=233 ctermbg=210 guifg=#141414 guibg=#ff9999 guisp=NONE cterm=NONE gui=NONE
 hi DiffText ctermfg=233 ctermbg=158 guifg=#141414 guibg=#b3ffcc guisp=NONE cterm=NONE gui=NONE
 hi Directory ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi EndOfBuffer ctermfg=231 ctermbg=NONE guifg=#fbfbfb guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -199,7 +203,7 @@ hi SpecialKey ctermfg=248 ctermbg=NONE guifg=#a8a8a8 guibg=NONE guisp=NONE cterm
 hi SpellBad ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=#b72e2e cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellCap ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=#7ab1cc cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellLocal ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=#009688 cterm=NONE,underline gui=NONE,italic,undercurl
-hi SpellRare ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=#ab47bc cterm=NONE,underline gui=NONE,italic,undercurl
+hi SpellRare ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=#a14cc9 cterm=NONE,underline gui=NONE,italic,undercurl
 hi StatusLine ctermfg=252 ctermbg=236 guifg=#d3d3d3 guibg=#333333 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi StatusLineNC ctermfg=255 ctermbg=239 guifg=#ebebeb guibg=#505050 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link StatusLineTerm StatusLine
@@ -212,16 +216,16 @@ hi Visual ctermfg=NONE ctermbg=255 guifg=NONE guibg=#ebebeb guisp=NONE cterm=NON
 hi! link VisualNOS Visual
 hi WarningMsg ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi WildMenu ctermfg=74 ctermbg=252 guifg=#7ab1cc guibg=#d3d3d3 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Boolean ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Character ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Boolean ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Character ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Comment ctermfg=242 ctermbg=NONE guifg=#696969 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
 hi Conditional ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Constant ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Constant ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Define ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Debug ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Delimiter Statement
 hi Exception ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Float ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Float ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Function ctermfg=74 ctermbg=NONE guifg=#7ab1cc guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Identifier ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Ignore ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -229,7 +233,7 @@ hi Include ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NON
 hi Keyword ctermfg=124 ctermbg=NONE guifg=#b72e2e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Label Statement
 hi Macro ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Number ctermfg=133 ctermbg=NONE guifg=#ab47bc guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Number ctermfg=98 ctermbg=NONE guifg=#a14cc9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Operator Normal
 hi PreCondit ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi PreProc ctermfg=30 ctermbg=NONE guifg=#009688 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -265,7 +269,7 @@ hi NormalMode ctermfg=239 ctermbg=231 guifg=#505050 guibg=#fbfbfb guisp=NONE cte
 hi InsertMode ctermfg=74 ctermbg=231 guifg=#7ab1cc guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi ReplaceMode ctermfg=30 ctermbg=231 guifg=#009688 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualMode ctermfg=208 ctermbg=231 guifg=#ff9900 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CommandMode ctermfg=133 ctermbg=231 guifg=#ab47bc guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi CommandMode ctermfg=98 ctermbg=231 guifg=#a14cc9 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Warnings ctermfg=208 ctermbg=231 guifg=#ff9900 guibg=#fbfbfb guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 let g:terminal_ansi_colors = [
       \ '#fbfbfb',
@@ -273,7 +277,7 @@ let g:terminal_ansi_colors = [
       \ '#47b36b',
       \ '#ff9900',
       \ '#7ab1cc',
-      \ '#ab47bc',
+      \ '#a14cc9',
       \ '#009688',
       \ '#141414',
       \ '#fbfbfb',
@@ -281,7 +285,7 @@ let g:terminal_ansi_colors = [
       \ '#47b36b',
       \ '#ff9900',
       \ '#7ab1cc',
-      \ '#ab47bc',
+      \ '#a14cc9',
       \ '#009688',
       \ '#505050'
       \ ]
@@ -313,8 +317,8 @@ finish
 " Color: blue                 #7ab1cc     ~        Blue
 " Color: brightblue           #afc3d7     ~        LightBlue
 " Color: darkblue             #266280     ~        DarkBlue
-" Color: magenta              #ab47bc     ~        Magenta
-" Color: brightmagenta        #d1c4e9     ~        LightMagenta
+" Color: magenta              #a14cc9     ~        Magenta
+" Color: brightmagenta        #bc7fd8     ~        LightMagenta
 " Color: darkmagenta          #4527a0     ~        DarkMagenta
 " Color: cyan                 #009688     ~        Cyan
 " Color: brightcyan           #b2dfdb     ~        LightCyan
@@ -337,8 +341,10 @@ finish
 " CursorColumn                  -> CursorLine
 " CursorLine                       none         bg1     bold
 " DiffAdd                          fg0          brightgreen
+" DiffAdded                        fg0          brightgreen
 " DiffChange                       fg0          brightblue
 " DiffDelete                       fg0          brightred
+" DiffRemoved                      fg0          brightred
 " DiffText                         fg0          brightgreen
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none
@@ -471,8 +477,10 @@ finish
 " CursorColumn                  -> CursorLine
 " CursorLine                       none         bg1     bold
 " DiffAdd                          fg0          brightgreen
+" DiffAdded                        fg0          brightgreen
 " DiffChange                       fg0          brightblue
 " DiffDelete                       fg0          brightred
+" DiffRemoved                      fg0          brightred
 " DiffText                         fg0          brightgreen
 " Directory                        blue         none    bold
 " EndOfBuffer                      bg0          none

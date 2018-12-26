@@ -30,8 +30,10 @@ Cursor                           none         none    reverse
 CursorColumn                  -> CursorLine
 CursorLine                       none         bg1     bold
 DiffAdd                          fg0          brightgreen
+DiffAdded                        fg0          brightgreen
 DiffChange                       fg0          brightblue
 DiffDelete                       fg0          brightred
+DiffRemoved                      fg0          brightred
 DiffText                         fg0          brightgreen
 Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
