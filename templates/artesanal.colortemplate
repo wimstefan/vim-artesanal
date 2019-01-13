@@ -5,33 +5,35 @@ Short name:      artesanal
 Author:          Stefan Wimmer <wimstefan@gmail.com>
 Maintainer:      Stefan Wimmer <wimstefan@gmail.com>
 Website:         https://github.com/wimstefan/vim-artesanal
-Description:     A Vim colorscheme with light and dark variants based on Material Design.
+Description:     A Vim colorscheme with light and dark variants originally based on Material Design (now strongly modified to my likings).
 Terminal Colors: 256
 Option Prefix:   artesanal
 
 Include: _help.colortemplate
 
 Background: light
-Color: fg0 #141414 ~
-Color: fg1 #333333 ~
-Color: fg2 #505050 ~
-Color: fg4 #707070 ~
-Color: bg0 #fbfbfb ~
-Color: bg1 #ebebeb ~
-Color: bg2 #d3d3d3 ~
-Color: bg3 #bdbdbd ~
-Color: bg4 #a8a8a8 ~
+Color: fg0 #2e3440 ~
+Color: fg1 #37474f ~
+Color: fg2 #455a64 ~
+Color: fg3 #546e7a ~
+Color: fg4 #90a4ae ~
+Color: bg0 #eaeaeb ~
+Color: bg1 #e0e0e0 ~
+Color: bg2 #bdbdbd ~
+Color: bg3 #aaaaaa ~
+Color: bg4 #707070 ~
 Include: _light.colortemplate
 
 Background: dark
-Color: fg0 #fbfbfb ~
-Color: fg1 #ebebeb ~
-Color: fg2 #d3d3d3 ~
+Color: fg0 #eaeaeb ~
+Color: fg1 #e0e0e0 ~
+Color: fg2 #bdbdbd ~
+Color: fg3 #9e9e9e ~
 Color: fg4 #707070 ~
 Color: bg0 #2e3440 ~
-Color: bg1 #424853 ~
-Color: bg2 #575c66 ~
-Color: bg3 #6c7079 ~
-Color: bg4 #81858c ~
+Color: bg1 #37474f ~
+Color: bg2 #455a64 ~
+Color: bg3 #546e7a ~
+Color: bg4 #90a4ae ~
 Include: _dark.colortemplate
 

@@ -7,7 +7,7 @@ endverbatim
   # Transparent background
   Normal       fg1           none
   CursorLineNr yellow        none
-  FoldColumn   brightblack   none
+  FoldColumn   darkgray      none
   SignColumn   fg2           none
   VertSplit    bg3           none
 verbatim
@@ -16,7 +16,7 @@ endverbatim
   # Opaque background
   Normal       fg1           bg0
   CursorLineNr yellow        bg1
-  FoldColumn   brightblack   bg1
+  FoldColumn   darkgray      bg1
   SignColumn   fg2           bg1
   VertSplit    bg3           bg0
 verbatim
@@ -27,20 +27,20 @@ endverbatim
 ColorColumn                      none         bg1
 Conceal                          blue         none
 Cursor                           none         none    reverse
-CursorColumn                  -> CursorLine
-CursorLine                       none         bg1     bold
-DiffAdd                          fg0          brightgreen
-DiffAdded                        fg0          brightgreen
-DiffChange                       fg0          brightblue
-DiffDelete                       fg0          brightred
-DiffRemoved                      fg0          brightred
-DiffText                         fg0          brightgreen
+CursorColumn                  -> ColorColumn
+CursorLine                    -> ColorColumn
+DiffAdd                          brightgreen  black   reverse
+DiffAdded                        brightgreen  black   reverse
+DiffChange                       brightblue   black   reverse
+DiffDelete                       brightred    black   reverse
+DiffRemoved                      brightred    black   reverse
+DiffText                         brightgreen  black   reverse
 Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
-Error                            bg0          red
+Error                            red          none    t=reverse,bold g=standout,bold
 ErrorMsg                      -> Error
-Folded                           brightblack  bg1     g=italic
-IncSearch                        brightyellow black   reverse
+Folded                           bg3          bg1     g=italic
+IncSearch                     -> Search
 LineNr                           bg3          bg1
 MatchParen                       none         bg2     bold
 ModeMsg                          blue         none
@@ -71,40 +71,40 @@ VisualNOS                     -> Visual
 WarningMsg                       red          none
 WildMenu                         blue         bg2     bold
 # Other conventional group names (see `:help group-name`)
-Boolean                          magenta      none
-Character                        magenta      none
-Comment                          brightblack  none    g=italic
-Conditional                      red          none
-Constant                         magenta      none
-Define                           cyan         none
-Debug                            red          none
-Delimiter                     -> Statement
-Exception                        red          none
-Float                            magenta      none
-Function                         blue         none    bold
-Identifier                       cyan         none
+Boolean                       -> Constant
+Character                     -> Constant
+Comment                          fg3          none
+Conditional                   -> Statement
+Constant                         green        none
+Define                        -> PreProc
+Debug                         -> Special
+Delimiter                     -> Special
+Exception                     -> Statement
+Float                         -> Constant
+Function                         cyan         none
+Identifier                       blue         none
 Ignore                           fg           none
-Include                          cyan         none
-Keyword                          red          none
+Include                       -> PreProc
+Keyword                       -> Statement
 Label                         -> Statement
-Macro                            cyan         none
-Number                           magenta      none
-Operator                      -> Normal
-PreCondit                        cyan         none
+Macro                         -> PreProc
+Number                        -> Constant
+Operator                      -> Statement
+PreCondit                     -> PreProc
 PreProc                          cyan         none
-Repeat                           red          none
-SpecialChar                      red          none
-SpecialComment                   red          none
+Repeat                        -> Statement
+SpecialChar                   -> Special
+SpecialComment                -> Special
 Statement                        red          none
-StorageClass                     green        none
+StorageClass                  -> Type
 Special                          yellow       none
-String                           green        none
-Structure                        cyan         none
+String                        -> Constant
+Structure                     -> Type
 Tag                           -> Special
-Todo                             fg           bg0     t=bold g=bold,italic
-Type                             cyan         none
-Typedef                          cyan         none
-Underlined                       blue         none    underline
+Todo                             cyan         none    reverse
+Type                             darkcyan     none
+Typedef                       -> Type
+Underlined                       none         none    underline
 # Language mapping cursor
 lCursor                       -> Cursor
 # See `:help CursorIM`

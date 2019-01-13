@@ -2,27 +2,27 @@
 
 # Comment out (do not delete) the definitions that you want to keep at their default.
 # Color name                GUI         Base256  Base16 (optional)
-Color: black                #000000     ~        Black
-Color: brightblack          #696969     ~        DimGray
-Color: red                  #ff4d4d     ~        Red
-Color: brightred            #d66363     ~        LightRed
-Color: darkred              #b30000     ~        DarkRed
-Color: green                #47b36b     ~        Green
-Color: brightgreen          #4c8c6c     ~        LightGreen
-Color: darkgreen            #268044     ~        DarkGreen
-Color: yellow               #ffff80     ~        Yellow
-Color: brightyellow         #ffffaf     ~        LightYellow
-Color: darkyellow           #ffea00     ~        DarkYellow
-Color: blue                 #7ab1cc     ~        Blue
-Color: brightblue           #5f87af     ~        LightBlue
-Color: darkblue             #266280     ~        DarkBlue
-Color: magenta              #a14cc9     ~        Magenta
-Color: brightmagenta        #bc7fd8     ~        LightMagenta
-Color: darkmagenta          #4527a0     ~        DarkMagenta
-Color: cyan                 #009688     ~        Cyan
-Color: brightcyan           #b2dfdb     ~        LightCyan
-Color: darkcyan             #00695c     ~        DarkCyan
-Color: white                #dcdcdc     ~        Gainsboro
+Color: black                #121419     ~        Black
+Color: darkgray             #575c66     ~        DarkGray
+Color: red                  #e84256     ~        Red
+Color: brightred            #f5b3bb     ~        LightRed
+Color: darkred              #dc1b33     ~        DarkRed
+Color: green                #00bf8a     ~        Green
+Color: brightgreen          #99d1c1     ~        LightGreen
+Color: darkgreen            #008c65     ~        DarkGreen
+Color: yellow               #fff176     ~        Yellow
+Color: brightyellow         #ffffa8     ~        LightYellow
+Color: darkyellow           #e5d85c     ~        DarkYellow
+Color: blue                 #6699cc     ~        Blue
+Color: brightblue           #b2cce5     ~        LightBlue
+Color: darkblue             #517aa3     ~        DarkBlue
+Color: magenta              #fa75e2     ~        Magenta
+Color: brightmagenta        #fc86ec     ~        LightMagenta
+Color: darkmagenta          #f844d8     ~        DarkMagenta
+Color: cyan                 #00bbcc     ~        Cyan
+Color: brightcyan           #99eaea     ~        LightCyan
+Color: darkcyan             #0095a3     ~        DarkCyan
+Color: white                #eaeaeb     ~        Gainsboro
 Color: brightwhite          #ffffff     ~        White
 
 Include: _common.colortemplate
