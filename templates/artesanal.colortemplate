@@ -6,34 +6,37 @@ Author:          Stefan Wimmer <wimstefan@gmail.com>
 Maintainer:      Stefan Wimmer <wimstefan@gmail.com>
 Website:         https://github.com/wimstefan/vim-artesanal
 Description:     A Vim colorscheme with light and dark variants originally based on Material Design (now strongly modified to my likings).
-Terminal Colors: 256
+Variant:         gui 256 16
 Option Prefix:   artesanal
+NeoVim:          yes
 
 Include: _help.colortemplate
 
 Background: light
-Color: fg0 #2e3440 ~
-Color: fg1 #37474f ~
-Color: fg2 #455a64 ~
-Color: fg3 #546e7a ~
-Color: fg4 #90a4ae ~
-Color: bg0 #eaeaeb ~
-Color: bg1 #e0e0e0 ~
-Color: bg2 #bdbdbd ~
-Color: bg3 #aaaaaa ~
-Color: bg4 #707070 ~
+Variant:   gui     256 16
+Color: fg0 #2e3440 ~   Black
+Color: fg1 #37474f ~   Black
+Color: fg2 #455a64 ~   DarkGrey
+Color: fg3 #546e7a ~   DarkGrey
+Color: fg4 #90a4ae ~   LightGrey
+Color: bg0 #eff1f4 ~   White
+Color: bg1 #e4e6eb ~   White
+Color: bg2 #cdd2db ~   LightGrey
+Color: bg3 #b6bdcb ~   DarkGrey
+Color: bg4 #9fa8ba ~   DarkGrey
 Include: _light.colortemplate
 
 Background: dark
-Color: fg0 #eaeaeb ~
-Color: fg1 #e0e0e0 ~
-Color: fg2 #bdbdbd ~
-Color: fg3 #9e9e9e ~
-Color: fg4 #707070 ~
-Color: bg0 #2e3440 ~
-Color: bg1 #37474f ~
-Color: bg2 #455a64 ~
-Color: bg3 #546e7a ~
-Color: bg4 #90a4ae ~
+Variant:   gui     256 16
+Color: fg0 #eff1f4 ~   White
+Color: fg1 #e4e6eb ~   White
+Color: fg2 #cdd2db ~   LightGrey
+Color: fg3 #b6bdcb ~   DarkGrey
+Color: fg4 #9fa8ba ~   DarkGrey
+Color: bg0 #2e3440 ~   Black
+Color: bg1 #37474f ~   Black
+Color: bg2 #455a64 ~   DarkGrey
+Color: bg3 #546e7a ~   DarkGrey
+Color: bg4 #90a4ae ~   LightGrey
 Include: _dark.colortemplate
 

@@ -1,27 +1,21 @@
 # vim: ft=colortemplate fdm=marker
 
 # Default highlight groups {{{
-verbatim
-if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
-endverbatim
+#if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
   # Transparent background
   Normal       fg1           none
   CursorLineNr yellow        none
   FoldColumn   darkgray      none
   SignColumn   fg2           none
   VertSplit    bg3           none
-verbatim
-else
-endverbatim
+#else
   # Opaque background
   Normal       fg1           bg0
   CursorLineNr yellow        bg1
   FoldColumn   darkgray      bg1
   SignColumn   fg2           bg1
   VertSplit    bg3           bg0
-verbatim
-endif
-endverbatim
+#endif
 
 # Group                          Fg           Bg      Attributes
 ColorColumn                      none         bg1
@@ -114,20 +108,6 @@ ToolbarLine                      none         bg3
 ToolbarButton                    fg0          bg3     bold
 # }}}
 
-# Italics {{{
-verbatim
-if get(g:, "@optionprefix_italic", 0)
-  hi Comment cterm=italic
-  hi Folded cterm=italic
-  hi SpellBad cterm=italic,underline
-  hi SpellCap cterm=italic,underline
-  hi SpellLocal cterm=italic,underline
-  hi SpellRare cterm=italic,underline
-  hi Todo cterm=italic
-endif
-endverbatim
-# }}}
-
 # Additional highlight groups {{{
 # Input mode cursor
 iCursor                       -> Cursor
@@ -144,6 +124,7 @@ Warnings                         yellow       bg0     reverse
 # }}}
 
 # Terminal colors {{{
-Include: _terminal.colortemplate
+TermCursor                    -> Cursor
+TermCursorNC                     bg1          fg1
 # }}}
 

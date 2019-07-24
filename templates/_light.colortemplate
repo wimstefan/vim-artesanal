@@ -22,7 +22,10 @@ Color: darkmagenta          #9a008d     ~        DarkMagenta
 Color: cyan                 #008d9a     ~        Cyan
 Color: brightcyan           #00d3e7     ~        LightCyan
 Color: darkcyan             #007681     ~        DarkCyan
-Color: white                #eaeaeb     ~        Gainsboro
+Color: white                #eff1f4     ~        White
 Color: brightwhite          #ffffff     ~        White
+
+Term Colors: black darkred darkgreen darkyellow darkblue darkmagenta darkcyan white
+Term Colors: darkgray red green yellow blue magenta cyan brightwhite
 
 Include: _common.colortemplate
