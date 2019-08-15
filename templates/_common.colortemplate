@@ -18,11 +18,11 @@
 #endif
 
 # Group                          Fg           Bg      Attributes
-ColorColumn                      none         bg1
+ColorColumn                      none         bg1     bold
 Conceal                          blue         none
-Cursor                           none         none    reverse
-CursorColumn                  -> ColorColumn
-CursorLine                    -> ColorColumn
+Cursor                           none         none    reverse,bold
+CursorColumn                     none         none    italic,bold
+CursorLine                       none         none    italic,bold
 DiffAdd                          brightgreen  black   reverse
 DiffAdded                        brightgreen  black   reverse
 DiffChange                       brightblue   black   reverse
