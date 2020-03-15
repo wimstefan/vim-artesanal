@@ -34,7 +34,7 @@ EndOfBuffer                      bg0          none
 Error                            red          none    t=reverse,bold g=standout,bold
 ErrorMsg                      -> Error
 Folded                           bg3          bg1     g=italic
-IncSearch                     -> Search
+IncSearch                        yellow       black   reverse
 LineNr                           bg3          bg1
 MatchParen                       none         bg2     bold
 ModeMsg                          blue         none
