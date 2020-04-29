@@ -1,25 +1,57 @@
 # vim: ft=colortemplate fdm=marker
 
 # Default highlight groups {{{
-#if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
-  # Transparent background
-  Normal       fg1           none
-  CursorLineNr yellow        none
-  FoldColumn   darkgray      none
-  SignColumn   fg2           none
-  VertSplit    bg3           none
+#if !has('gui_running') && get(g:, '@optionprefix_dimmed', 0)
+  # dimmed colours
+  Conceal                          darkblue     none
+  Constant                         darkgreen    none
+  Directory                        darkblue     none    bold
+  Error                            darkred      none    t=reverse,bold g=standout,bold
+  Function                         darkcyan     none
+  Identifier                       darkblue     none
+  ModeMsg                          darkblue     none
+  MoreMsg                          darkgreen    none
+  PreProc                          darkcyan     none
+  Statement                        darkred      none
+  Special                          darkyellow   none
+  Todo                             darkcyan     none    reverse
+  WarningMsg                       darkred      none
+  WildMenu                         darkblue     bg2     bold
 #else
-  # Opaque background
-  Normal       fg1           bg0
-  CursorLineNr yellow        bg1
-  FoldColumn   darkgray      bg1
-  SignColumn   fg2           bg1
-  VertSplit    bg3           bg0
+  # default colours
+  Conceal                          blue         none
+  Constant                         green        none
+  Directory                        blue         none    bold
+  Error                            red          none    t=reverse,bold g=standout,bold
+  Function                         cyan         none
+  Identifier                       blue         none
+  ModeMsg                          blue         none
+  MoreMsg                          green        none
+  PreProc                          cyan         none
+  Statement                        red          none
+  Special                          yellow       none
+  Todo                             cyan         none    reverse
+  WarningMsg                       red          none
+  WildMenu                         blue         bg2     bold
+#endif
+#if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
+  # transparent background
+  Normal                           fg1          none
+  CursorLineNr                     yellow       none
+  FoldColumn                       darkgray     none
+  SignColumn                       fg2          none
+  VertSplit                        bg3          none
+#else
+  # opaque background
+  Normal                           fg1          bg0
+  CursorLineNr                     yellow       bg1
+  FoldColumn                       darkgray     bg1
+  SignColumn                       fg2          bg1
+  VertSplit                        bg3          bg0
 #endif
 
 # Group                          Fg           Bg      Attributes
 ColorColumn                      none         bg1     bold
-Conceal                          blue         none
 Cursor                           none         none    reverse,bold
 CursorColumn                     none         none    italic,bold
 CursorLine                       none         none    italic,bold
@@ -29,16 +61,12 @@ DiffChange                       brightblue   black   reverse
 DiffDelete                       brightred    black   reverse
 DiffRemoved                      brightred    black   reverse
 DiffText                         brightgreen  black   reverse
-Directory                        blue         none    bold
 EndOfBuffer                      bg0          none
-Error                            red          none    t=reverse,bold g=standout,bold
 ErrorMsg                      -> Error
 Folded                           bg3          bg1     g=italic
 IncSearch                        yellow       black   reverse
 LineNr                           bg3          bg1
 MatchParen                       none         bg2     bold
-ModeMsg                          blue         none
-MoreMsg                          green        none
 NonText                          bg4          none
 Pmenu                            fg1          bg2
 PmenuSbar                        none         bg2
@@ -62,21 +90,16 @@ TabLineSel                       fg1          bg1
 Title                            fg0          none    bold
 Visual                           none         bg1
 VisualNOS                     -> Visual
-WarningMsg                       red          none
-WildMenu                         blue         bg2     bold
 # Other conventional group names (see `:help group-name`)
 Boolean                       -> Constant
 Character                     -> Constant
 Comment                          fg3          none
 Conditional                   -> Statement
-Constant                         green        none
 Define                        -> PreProc
 Debug                         -> Special
 Delimiter                     -> Special
 Exception                     -> Statement
 Float                         -> Constant
-Function                         cyan         none
-Identifier                       blue         none
 Ignore                           fg           none
 Include                       -> PreProc
 Keyword                       -> Statement
@@ -85,17 +108,13 @@ Macro                         -> PreProc
 Number                        -> Constant
 Operator                      -> Statement
 PreCondit                     -> PreProc
-PreProc                          cyan         none
 Repeat                        -> Statement
 SpecialChar                   -> Special
 SpecialComment                -> Special
-Statement                        red          none
 StorageClass                  -> Type
-Special                          yellow       none
 String                        -> Constant
 Structure                     -> Type
 Tag                           -> Special
-Todo                             cyan         none    reverse
 Type                             darkcyan     none
 Typedef                       -> Type
 Underlined                       none         none    underline

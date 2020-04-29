@@ -1,4 +1,4 @@
-*artesanal.txt*       For Vim version 8.2       Last change: 2020 Mar 15
+*artesanal.txt*       For Vim version 8.2       Last change: 2020 Apr 29
 
 
                 Artesanal color scheme    by Stefan Wimmer <wimstefan@gmail.com>
@@ -19,9 +19,15 @@ Artesanal requires at least 256 colors and supports "true color" terminals.
 ==============================================================================
 Colorscheme options                                   artesanal-options*
 
-                                                 *g:artesanal_transp_bg*
+                                                 *g:artesanal_dimmed*
+Set to 1 to dim down some colours a bit.
+Takes effect only in the terminal.
+
+       let g:artesanal_dimmed = 0
+
+                                                 *g:artesanal_transparent*
 Set to 1 if you want a transparent background.
 Takes effect only in the terminal.
 
-       let g:artesanal_transp_bg = 0
+       let g:artesanal_transparent = 0
 
