@@ -3,6 +3,19 @@
 # Default highlight groups {{{
 #if !has('gui_running') && get(g:, '@optionprefix_dimmed', 0)
   # dimmed colours
+  #if &background ==# 'light'
+    #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
+      Normal                       realblack    none
+    #else
+      Normal                       realblack    bg0
+    #endif
+  #elseif !has('gui_running') && &background ==# 'dark'
+    #if get(g:, '@optionprefix_transparent', 0)
+      Normal                       brightwhite  none
+    #else
+      Normal                       brightwhite  bg0
+    #endif
+  #endif
   Conceal                          darkblue     none
   Constant                         darkgreen    none
   Directory                        darkblue     none    bold
@@ -19,6 +32,11 @@
   WildMenu                         darkblue     bg2     bold
 #else
   # default colours
+  #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
+    Normal                         fg1          none
+  #else
+    Normal                         fg1          bg0
+  #endif
   Conceal                          blue         none
   Constant                         green        none
   Directory                        blue         none    bold
@@ -36,14 +54,12 @@
 #endif
 #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
   # transparent background
-  Normal                           fg1          none
   CursorLineNr                     yellow       none
   FoldColumn                       darkgray     none
   SignColumn                       fg2          none
   VertSplit                        bg3          none
 #else
   # opaque background
-  Normal                           fg1          bg0
   CursorLineNr                     yellow       bg1
   FoldColumn                       darkgray     bg1
   SignColumn                       fg2          bg1

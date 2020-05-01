@@ -3,6 +3,7 @@
 # Comment out (do not delete) the definitions that you want to keep at their default.
 # Color name                GUI         Base256  Base16 (optional)
 Color: black                #121419     ~        Black
+Color: realblack            #000000     ~        Black
 Color: darkgray             #575c66     ~        DarkGray
 Color: red                  #ae1528     ~        Red
 Color: brightred            #ddabbc     ~        LightRed
