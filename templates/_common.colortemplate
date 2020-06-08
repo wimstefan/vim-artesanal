@@ -3,7 +3,7 @@
 # Default highlight groups {{{
 #if !has('gui_running') && get(g:, '@optionprefix_dimmed', 0)
   # dimmed colours
-  #if &background ==# 'light'
+  #if !has('gui_running') && &background ==# 'light'
     #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
       Normal                       realblack    none
     #else
@@ -69,14 +69,14 @@
 # Group                          Fg           Bg      Attributes
 ColorColumn                      none         bg1     bold
 Cursor                           none         none    reverse,bold
-CursorColumn                     none         none    italic,bold
-CursorLine                       none         none    italic,bold
-DiffAdd                          brightgreen  black   reverse
-DiffAdded                        brightgreen  black   reverse
-DiffChange                       brightblue   black   reverse
-DiffDelete                       brightred    black   reverse
-DiffRemoved                      brightred    black   reverse
-DiffText                         brightgreen  black   reverse
+CursorColumn                  -> CursorLine
+CursorLine                       none         bg1
+DiffAdd                          none         diffgreen
+DiffAdded                        none         diffgreen
+DiffChange                       none         diffblue
+DiffDelete                       none         diffred
+DiffRemoved                      none         diffred
+DiffText                         none         diffgreen
 EndOfBuffer                      bg0          none
 ErrorMsg                      -> Error
 Folded                           bg3          bg1     g=italic
@@ -103,7 +103,7 @@ StatusLineTermNC              -> StatusLineNC
 TabLine                       -> TabLineFill
 TabLineFill                      fg2          bg3
 TabLineSel                       fg1          bg1
-Title                            fg0          none    bold
+Title                            red          none   bold
 Visual                           none         bg1
 VisualNOS                     -> Visual
 # Other conventional group names (see `:help group-name`)
