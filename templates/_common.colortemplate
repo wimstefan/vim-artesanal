@@ -1,8 +1,8 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# Default highlight groups {{{
+; Default highlight groups {{{
 #if !has('gui_running') && get(g:, '@optionprefix_dimmed', 0)
-  # dimmed colours
+  ; dimmed colours
   #if !has('gui_running') && &background ==# 'light'
     #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
       Normal                       realblack    none
@@ -18,8 +18,8 @@
   #endif
   Conceal                          darkblue     none
   Constant                         darkgreen    none
-  Directory                        darkblue     none    bold
-  Error                            darkred      none    t=reverse,bold g=standout,bold
+  Directory                        darkblue     none     bold
+  Error                            darkred      none     t=reverse,bold g=standout,bold
   Function                         darkcyan     none
   Identifier                       darkblue     none
   ModeMsg                          darkblue     none
@@ -27,11 +27,11 @@
   PreProc                          darkcyan     none
   Statement                        darkred      none
   Special                          darkyellow   none
-  Todo                             darkcyan     none    reverse
+  Todo                             darkcyan     none     reverse
   WarningMsg                       darkred      none
-  WildMenu                         darkblue     bg2     bold
+  WildMenu                         darkblue     bg2      bold
 #else
-  # default colours
+  ; default colours
   #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
     Normal                         fg1          none
   #else
@@ -39,8 +39,8 @@
   #endif
   Conceal                          blue         none
   Constant                         green        none
-  Directory                        blue         none    bold
-  Error                            red          none    t=reverse,bold g=standout,bold
+  Directory                        blue         none     bold
+  Error                            red          none     t=reverse,bold g=standout,bold
   Function                         cyan         none
   Identifier                       blue         none
   ModeMsg                          blue         none
@@ -48,29 +48,29 @@
   PreProc                          cyan         none
   Statement                        red          none
   Special                          yellow       none
-  Todo                             cyan         none    reverse
+  Todo                             cyan         none     reverse
   WarningMsg                       red          none
-  WildMenu                         blue         bg2     bold
+  WildMenu                         blue         bg2      bold
 #endif
 #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
-  # transparent background
+  ; transparent background
   CursorLineNr                     yellow       none
   FoldColumn                       darkgray     none
   SignColumn                       fg2          none
   VertSplit                        bg3          none
 #else
-  # opaque background
+  ; opaque background
   CursorLineNr                     yellow       bg1
   FoldColumn                       darkgray     bg1
   SignColumn                       fg2          bg1
   VertSplit                        bg3          bg0
 #endif
 
-# Group                          Fg           Bg      Attributes
-ColorColumn                      none         bg1     bold
-Cursor                           none         none    reverse,bold
-CursorColumn                  -> CursorLine
-CursorLine                       none         bg1
+; Group                          Fg           Bg         Attributes
+ColorColumn                      none         bg1        bold
+Cursor                           none         none       reverse,bold
+CursorColumn                     none         bg1
+CursorLine                       none         bg1       bold
 DiffAdd                          none         diffgreen
 DiffAdded                        none         diffgreen
 DiffChange                       none         diffblue
@@ -79,34 +79,35 @@ DiffRemoved                      none         diffred
 DiffText                         none         diffgreen
 EndOfBuffer                      bg0          none
 ErrorMsg                      -> Error
-Folded                           bg3          bg1     g=italic
-IncSearch                        yellow       black   reverse
+Folded                           bg3          bg1        g=italic
+IncSearch                        yellow       black      reverse
 LineNr                           bg3          bg1
-MatchParen                       none         bg2     bold
+SignColumn                       none         bg1
+MatchParen                       none         bg2        bold
 NonText                          bg4          none
 Pmenu                            fg1          bg2
 PmenuSbar                        none         bg2
-PmenuSel                         bg1          fg2    bold
+PmenuSel                         bg1          fg2        bold
 PmenuThumb                       none         bg4
 Question                         darkyellow   none
 QuickFixLine                  -> Search
-Search                           brightyellow black   reverse
+Search                           brightyellow black      reverse
 SpecialKey                       bg4          none
-SpellBad                         red          none    t=underline g=italic,undercurl s=red
-SpellCap                         blue         none    t=underline g=italic,undercurl s=blue
-SpellLocal                       cyan         none    t=underline g=italic,undercurl s=cyan
-SpellRare                        magenta      none    t=underline g=italic,undercurl s=magenta
-StatusLine                       bg2          fg1     reverse
-StatusLineNC                     bg1          fg2     reverse
+SpellBad                         red          none       t=underline g=italic,undercurl
+SpellCap                         blue         none       t=underline g=italic,undercurl
+SpellLocal                       cyan         none       t=underline g=italic,undercurl
+SpellRare                        magenta      none       t=underline g=italic,undercurl
+StatusLine                       fg1          bg2
+StatusLineNC                     fg2          bg1
 StatusLineTerm                -> StatusLine
 StatusLineTermNC              -> StatusLineNC
 TabLine                       -> TabLineFill
 TabLineFill                      fg2          bg3
 TabLineSel                       fg1          bg1
-Title                            red          none   bold
+Title                            red          none       bold
 Visual                           none         bg1
 VisualNOS                     -> Visual
-# Other conventional group names (see `:help group-name`)
+; Other conventional group names (see `:help group-name`)
 Boolean                       -> Constant
 Character                     -> Constant
 Comment                          fg3          none
@@ -133,33 +134,33 @@ Structure                     -> Type
 Tag                           -> Special
 Type                             darkcyan     none
 Typedef                       -> Type
-Underlined                       none         none    underline
-# Language mapping cursor
+Underlined                       none         none       underline
+; Language mapping cursor
 lCursor                       -> Cursor
-# See `:help CursorIM`
-CursorIM                         none         none    reverse
-# See `:help window-toolbar`
+; See `:help CursorIM`
+CursorIM                         none         none       reverse
+; See `:help window-toolbar`
 ToolbarLine                      none         bg3
-ToolbarButton                    fg0          bg3     bold
-# }}}
+ToolbarButton                    fg0          bg3        bold
+; }}}
 
-# Additional highlight groups {{{
-# Input mode cursor
+; Additional highlight groups {{{
+; Input mode cursor
 iCursor                       -> Cursor
-# Visual mode cursor, selection
+; Visual mode cursor, selection
 vCursor                       -> Cursor
 
-# Useful for custom status lines
-NormalMode                       fg2          bg0     reverse
-InsertMode                       blue         bg0     reverse
-ReplaceMode                      cyan         bg0     reverse
-VisualMode                       yellow       bg0     reverse
-CommandMode                      magenta      bg0     reverse
-Warnings                         yellow       bg0     reverse
-# }}}
+; Useful for custom status lines
+NormalMode                       fg2          bg0        reverse
+InsertMode                       blue         bg0        reverse
+ReplaceMode                      cyan         bg0        reverse
+VisualMode                       yellow       bg0        reverse
+CommandMode                      magenta      bg0        reverse
+Warnings                         yellow       bg0        reverse
+; }}}
 
-# Terminal colors {{{
+; Terminal colors {{{
 TermCursor                    -> Cursor
 TermCursorNC                     bg1          fg1
-# }}}
+; }}}
 

@@ -1,31 +1,31 @@
-# vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
+; vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
 
-# Comment out (do not delete) the definitions that you want to keep at their default.
-# Color name                GUI         Base256  Base16 (optional)
-Color: black                #121419     ~        Black
+; Comment out (do not delete) the definitions that you want to keep at their default.
+; Color name                GUI         Base256  Base16 (optional)
+Color: black                #1c313a     ~        Black
 Color: realblack            #000000     ~        Black
 Color: darkgray             #575c66     ~        DarkGray
-Color: red                  #e84256     ~        Red
-Color: brightred            #ddabbc     ~        LightRed
-Color: darkred              #dc1b33     ~        DarkRed
-Color: diffred              #d05a69     ~        Red
-Color: green                #00bf8a     ~        Green
-Color: brightgreen          #abddcc     ~        LightGreen
-Color: darkgreen            #008c65     ~        DarkGreen
-Color: diffgreen            #259a7a     ~        Green
-Color: yellow               #fff176     ~        Yellow
-Color: brightyellow         #ffffa8     ~        LightYellow
-Color: darkyellow           #e5d85c     ~        DarkYellow
-Color: blue                 #6699cc     ~        Blue
-Color: brightblue           #aec0e0     ~        LightBlue
-Color: darkblue             #517aa3     ~        DarkBlue
-Color: diffblue             #7e99b4     ~        Blue
-Color: magenta              #fa75e2     ~        Magenta
-Color: brightmagenta        #fc86ec     ~        LightMagenta
-Color: darkmagenta          #f844d8     ~        DarkMagenta
-Color: cyan                 #00bbcc     ~        Cyan
-Color: brightcyan           #99eaea     ~        LightCyan
-Color: darkcyan             #0095a3     ~        DarkCyan
+Color: red                  #ff616f     ~        Red
+Color: brightred            #ffcdd2     ~        LightRed
+Color: darkred              #ef5350     ~        DarkRed
+Color: diffred              #663d43     ~        Red
+Color: green                #69f0b9     ~        Green
+Color: brightgreen          #9fffe0     ~        LightGreen
+Color: darkgreen            #15cf83     ~        DarkGreen
+Color: diffgreen            #3f7070     ~        Green
+Color: yellow               #ffff8d     ~        Yellow
+Color: brightyellow         #fff9c4     ~        LightYellow
+Color: darkyellow           #ffeb3b     ~        DarkYellow
+Color: blue                 #90caf9     ~        Blue
+Color: brightblue           #bbdefb     ~        LightBlue
+Color: darkblue             #5d99c6     ~        DarkBlue
+Color: diffblue             #3f5a70     ~        Blue
+Color: magenta              #b39ddb     ~        Magenta
+Color: brightmagenta        #ce93d8     ~        LightMagenta
+Color: darkmagenta          #9575cd     ~        DarkMagenta
+Color: cyan                 #80deea     ~        Cyan
+Color: brightcyan           #b2ebf2     ~        LightCyan
+Color: darkcyan             #4dd0e1     ~        DarkCyan
 Color: white                #eff1f4     ~        White
 Color: brightwhite          #ffffff     ~        White
 

@@ -1,4 +1,4 @@
-# vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
+; vim: ft=colortemplate sessionoptions=buffers,tabpages,winsize,folds
 
 Full name:       Artesanal
 Short name:      artesanal
