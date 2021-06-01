@@ -159,6 +159,16 @@ CommandMode                      magenta      bg0        reverse
 Warnings                         yellow       bg0        reverse
 ; }}}
 
+; Plugin support {{{
+; GitSigns
+GitSignsAdd                      green    bg1
+GitSignsAddNr                 -> GitSignsAdd
+GitSignsChange                   blue     bg1
+GitSignsChangeNr              -> GitSignsChange
+GitSignsDelete                   red      bg1
+GitSignsDeleteNr              -> GitSignsDelete
+; }}}
+
 ; Terminal colors {{{
 TermCursor                    -> Cursor
 TermCursorNC                     bg1          fg1
