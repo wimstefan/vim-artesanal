@@ -54,16 +54,26 @@
 #endif
 #if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
   ; transparent background
+  LineNr                           bg2          none
   CursorLineNr                     yellow       none
   FoldColumn                       darkgray     none
-  SignColumn                       fg2          none
+  SignColumn                       none         none
   VertSplit                        bg3          none
+  Pmenu                            fg1          none
+  PmenuSbar                        fg2          none
+  PmenuSel                         fg2          none        reverse
+  PmenuThumb                       none         fg2
 #else
   ; opaque background
+  LineNr                           bg2          bg1
   CursorLineNr                     yellow       bg1
   FoldColumn                       darkgray     bg1
-  SignColumn                       fg2          bg1
+  SignColumn                       none          bg1
   VertSplit                        bg3          bg0
+  Pmenu                            fg1          bg2
+  PmenuSbar                        none         bg2
+  PmenuSel                         bg1          fg2        bold
+  PmenuThumb                       none         bg4
 #endif
 
 ; Group                          Fg           Bg         Attributes
@@ -81,14 +91,8 @@ EndOfBuffer                      bg0          none
 ErrorMsg                      -> Error
 Folded                           bg3          bg1        g=italic
 IncSearch                        yellow       black      reverse
-LineNr                           bg3          bg1
-SignColumn                       none         bg1
 MatchParen                       none         bg2        bold
 NonText                          bg4          none
-Pmenu                            fg1          bg2
-PmenuSbar                        none         bg2
-PmenuSel                         bg1          fg2        bold
-PmenuThumb                       none         bg4
 Question                         darkyellow   none
 QuickFixLine                  -> Search
 Search                           brightyellow black      reverse
@@ -156,16 +160,24 @@ InsertMode                       blue         bg0        reverse
 ReplaceMode                      cyan         bg0        reverse
 VisualMode                       yellow       bg0        reverse
 CommandMode                      magenta      bg0        reverse
-Warnings                         yellow       bg0        reverse
+Warnings                         red          bg0        reverse
 ; }}}
 
 ; Plugin support {{{
 ; GitSigns
-GitSignsAdd                      green    bg1
+#if !has('gui_running') && get(g:, '@optionprefix_transparent', 0)
+  ; transparent background
+  GitSignsAdd                      green    none
+  GitSignsChange                   blue     none
+  GitSignsDelete                   red      none
+#else
+  ; opaque background
+  GitSignsAdd                      green    bg1
+  GitSignsChange                   blue     bg1
+  GitSignsDelete                   red      bg1
+#endif
 GitSignsAddNr                 -> GitSignsAdd
-GitSignsChange                   blue     bg1
 GitSignsChangeNr              -> GitSignsChange
-GitSignsDelete                   red      bg1
 GitSignsDeleteNr              -> GitSignsDelete
 ; }}}
 
