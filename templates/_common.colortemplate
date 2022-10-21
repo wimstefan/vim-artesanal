@@ -80,7 +80,7 @@
 ColorColumn                      none         bg1        bold
 Cursor                           none         none       reverse,bold
 CursorColumn                     none         bg1
-CursorLine                       none         bg1       bold
+CursorLine                       none         bg1        bold
 DiffAdd                          none         diffgreen
 DiffAdded                        none         diffgreen
 DiffChange                       none         diffblue
@@ -186,3 +186,11 @@ TermCursor                    -> Cursor
 TermCursorNC                     bg1          fg1
 ; }}}
 
+; Neovim support {{{
+#if has('nvim')
+  DiagnosticInfo                   blue         none       bold
+  DiagnosticHint                   green        none       bold
+  DiagnosticWarn                   darkyellow   none       bold
+  DiagnosticError                  red          none       bold
+#endif
+; }}}
