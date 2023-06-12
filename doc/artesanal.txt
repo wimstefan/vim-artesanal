@@ -1,4 +1,4 @@
-*artesanal.txt*       For Vim version 9.0       Last change: 2022 Oct 21
+*artesanal.txt*       For Vim version 9.0       Last change: 2023 Jun 12
 
 
                 Artesanal color scheme    by Stefan Wimmer <wimstefan@gmail.com>
